@@ -1,0 +1,3 @@
+generation/*
+*__pycache__/
+*/wandb/*
