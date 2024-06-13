@@ -9,7 +9,6 @@ from peft import PeftModel
 import argparse
 from util import seed_everything
 
-seed_everything(2024) 
 
 def get_gen_config(MODEL_NAME):
     '''
@@ -33,7 +32,7 @@ def get_unique_dataset(df):
         if example['contest_number'] not in contest_numbers: 
             contest_numbers.append(example['contest_number'])
             examples.append({'contest_number': example['contest_number'], 'prompt': example['prompt']}) 
-    return examples
+    return examples[:10] # For testing purposes
 
 def process_generation(cell):
     '''
@@ -52,9 +51,33 @@ def process_generation(cell):
         cell = (cell[1:-1]).strip()
     return cell
 
+def generate_captions(model, tokenizer, test_dataset_unique, generation_config, num_generation): 
+    '''
+    Generate sample captions for each unique contests given the model
+    '''
+    prompt_df = pd.DataFrame(test_dataset_unique)
+    prompt_df = prompt_df.sort_values(by=['contest_number'], ascending=[True])
+    for i in range(num_generation): 
+        prompt_df["caption"+str(i+1)] = ""
+
+    for i in range(len(prompt_df)): 
+        row = prompt_df.iloc[i,:]
+        
+        texts = [row['prompt']]*num_generation
+        encoding = tokenizer(texts, padding=True, return_tensors='pt').to("cuda")
+        with torch.no_grad():
+            generated_ids = model.generate(**encoding, generation_config=generation_config)
+        generated_texts = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
+        generated_texts = [gen[len(row['prompt'])+1 :] for gen in generated_texts]
+        for j in range(num_generation): 
+            # Only keep the caption and discard the explanation.
+            prompt_df.iloc[i, j+2] = process_generation(generated_texts[j])
+    return prompt_df
+    
+
 ################ Save ZS Result ################
 
-def save_zs_results(MODEL_NAME, dataset_dir, output_dir, num_generation = 10):
+def save_zs_results(MODEL_NAME, dataset_dir, output_dir, num_generation = 10, setting = ""):
     '''
     Save the caption generation result for the zero-shot model.
     '''
@@ -68,191 +91,62 @@ def save_zs_results(MODEL_NAME, dataset_dir, output_dir, num_generation = 10):
         device_map="cuda",
     )
 
-    generation_config = get_gen_config(MODEL_NAME)
     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
     tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "left" 
+    generation_config = get_gen_config(MODEL_NAME)
 
     test_dataset_unique = get_unique_dataset(test_dataset)
+    
+    prompt_df = generate_captions(model, tokenizer, test_dataset_unique, generation_config, num_generation)
+    prompt_df.to_csv(os.path.join(output_dir, 'zs{}_gen{}.csv'.format(setting, num_generation)), index=False)
 
-    # For speed
-    prompt_df = pd.DataFrame(test_dataset_unique)
-    prompt_df = prompt_df.sort_values(by=['contest_number'], ascending=[True])
-    for i in range(num_generation): 
-        prompt_df["caption"+str(i+1)] = ""
-
-    print(prompt_df)
-    for i in range(len(prompt_df)): 
-        row = prompt_df.iloc[i,:]
-        
-        texts = [row['prompt']]*num_generation
-        encoding = tokenizer(texts, padding=True, return_tensors='pt').to("cuda")
-        with torch.no_grad():
-            generated_ids = model.generate(**encoding, generation_config=generation_config)
-        generated_texts = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
-        generated_texts = [gen[len(row['prompt'])+1 :] for gen in generated_texts]
-        for j in range(num_generation): 
-            # Only keep the caption and discard the explanation.
-            prompt_df.iloc[i, j+2] = process_generation(generated_texts[j])
-            
-    prompt_df.to_csv(os.path.join(output_dir, 'zs_gen{}.csv'.format(num_generation)), index=False)
 ################ Save SFT Result ################
 
-# from datasets import load_dataset, Dataset, load_from_disk
-# import pandas as pd
-# import random 
-# import numpy as np
-# import os
-# os.environ["CUDA_VISIBLE_DEVICES"] ="5"
-# # Mistral and LangChain packages (prompt engineering)
-# import torch
-# from langchain import PromptTemplate, HuggingFacePipeline
-# from langchain.output_parsers import ResponseSchema, StructuredOutputParser
-# from transformers import BitsAndBytesConfig, AutoModelForCausalLM, AutoTokenizer, GenerationConfig, pipeline, AutoConfig
-# from peft import PeftModel
-
-# for case in [200]:
-#     MODEL_NAME = "mistralai/Mistral-7B-Instruct-v0.1"
-#     # dir = MODEL_NAME
-#     # dir = "/data/yguo/output/sft-c13/ny-funny-caption-gpto-top1000/checkpoint-2000"
-#     dir = "/data/yguo/output/sft-c17/ny-funny-caption-gpto4/checkpoint-{}".format(case)
-#     # dir = "/data/yguo/output/sft-c12/checkpoint-1220" 
-#     # dir = "/data/yguo/output/sft-c13/checkpoint-500" 
-#     # dir = "/data/yguo/output/sft-c14/checkpoint-120" 
-#     # dir = "/data/yguo/output/dpo/mistralai/Mistral-7B-instruct-v0.1single-instruct-dpo-mistral-warmup/checkpoint-110"
-
-
-#     # train_sft = load_from_disk('data/train_sft_trl_gpto2_prompt_dataset') 
-#     # test_sft = load_from_disk('data/test_sft_trl_gpto2_prompt_dataset') 
-#     # validation_sft = load_from_disk('data/validation_sft_trl_gpto2_prompt_dataset')7 
+def save_sft_results(MODEL_NAME, dataset_dir, output_dir, model_checkpoint, \
+        new_padding_token, num_generation = 10, setting = ""):
+    '''
+    Save the caption generation result for the supervised finetuning model.
+    '''
  
+    test_dataset = load_from_disk(os.path.join(dataset_dir, 'sft_dataset', 'test_sft_dataset')) 
 
-#     train_sft = load_from_disk('/data/yguo/dataset/train_sft_trl_gpto4_prompt_dataset') 
-#     test_sft = load_from_disk('/data/yguo/dataset/test_sft_trl_gpto4_prompt_dataset') 
-#     validation_sft = load_from_disk('/data/yguo/dataset/validation_sft_trl_gpto4_prompt_dataset') 
+    if new_padding_token:   
+        tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+        tokenizer.add_special_tokens({'pad_token': '[PAD]'})
 
+        model = AutoModelForCausalLM.from_pretrained(
+            MODEL_NAME, torch_dtype=torch.float16,
+            trust_remote_code=True,
+            device_map="cuda",
+        )
+        model.resize_token_embeddings(len(tokenizer))
+        peft_model = PeftModel.from_pretrained(
+            model=model,
+            model_id=model_checkpoint,
+            device_map="cuda"
+        )
+        model = peft_model
+    else: 
+        tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
+        tokenizer.pad_token = tokenizer.eos_token
+        model = AutoModelForCausalLM.from_pretrained(
+            MODEL_NAME, torch_dtype=torch.float16,
+            trust_remote_code=True,
+            device_map="cuda",
+        )
+        peft_model = PeftModel.from_pretrained(
+            model=model,
+            model_id=model_checkpoint,
+            device_map="cuda"
+        )
+        model = peft_model
 
-#     def seed_everything(seed=2024):
-#         # Python's built-in random module
-#         random.seed(seed)
-        
-#         # Numpy
-#         np.random.seed(seed)
-        
-#         # PyTorch
-#         torch.manual_seed(seed)
-        
-#         # If using CUDA (GPU)
-#         if torch.cuda.is_available():
-#             torch.cuda.manual_seed(seed)
-#             torch.cuda.manual_seed_all(seed)  # if using multi-GPU.
-#             # The following two lines ensure deterministic behavior but may impact performance:
-#             torch.backends.cudnn.deterministic = True
-#             torch.backends.cudnn.benchmark = False
-#     seed_everything(2024)
+    generation_config = get_gen_config(MODEL_NAME)
+    test_dataset_unique = get_unique_dataset(test_dataset)
 
-#     # quantization_config = BitsAndBytesConfig(
-#     #     load_in_4bit=True,
-#     #     bnb_4bit_compute_dtype=torch.float16,
-#     #     bnb_4bit_quant_type="nf4",
-#     #     bnb_4bit_use_double_quant=True,
-#     # )
-
-
-#     # C13
-#     # tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-
-#     # model = AutoModelForCausalLM.from_pretrained(
-#     #     MODEL_NAME, torch_dtype=torch.float16,
-#     #     trust_remote_code=True,
-#     #     device_map="cuda",
-#     #     # quantization_config=quantization_config, 
-#     # )
-#     # peft_model = PeftModel.from_pretrained(
-#     #     model=model,
-#     #     model_id =dir,
-#     #     device_map="cuda"
-#     #     # device_map="auto",
-#     # )
-#     # model = peft_model
-
-#     # C17
-
-#     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-#     tokenizer.add_special_tokens({'pad_token': '[PAD]'})
-
-#     model = AutoModelForCausalLM.from_pretrained(
-#         MODEL_NAME, torch_dtype=torch.float16,
-#         trust_remote_code=True,
-#         device_map="cuda",
-#         # quantization_config=quantization_config, 
-#     )
-#     model.resize_token_embeddings(len(tokenizer))
-#     peft_model = PeftModel.from_pretrained(
-#         model=model,
-#         model_id =dir,
-#         device_map="cuda"
-#         # device_map="auto",
-#     )
-#     model = peft_model
-
-#     generation_config = GenerationConfig.from_pretrained(MODEL_NAME)
-#     generation_config.max_new_tokens = 256 # maximum number of new tokens that can be generated by the model
-#     generation_config.temperature = 0.7 # randomness of the generated tex
-#     generation_config.top_p = 0.95 #0.95 # diversity of the generated text
-#     generation_config.do_sample = True # sampling during the generation process
-#     generation_config.repetition_penalty = 1.15 # the degree to which the model should avoid repeating tokens in the generated text
-#     tokenizer = AutoTokenizer.from_pretrained(MODEL_NAME)
-#     tokenizer.pad_token = tokenizer.eos_token
-
-#     # pipe = pipeline(
-#     #     "text-generation",
-#     #     model=model,
-#     #     tokenizer=tokenizer,
-#     #     return_full_text=True,
-#     #     generation_config=generation_config,
-
-#     # )
-#     # llm = HuggingFacePipeline(pipeline=pipe)
-
-#     # test_sft = load_from_disk('data/test_sft_trl_prompt_dataset') 
-#     # train_sft = load_from_disk('data/train_sft_trl_prompt_dataset') 
-
-
-#     def get_unique_dataset(df, info):
-#         contest_numbers = []
-#         examples = []
-#         for example in df:
-#             if example['contest_number'] not in contest_numbers: 
-#                 contest_numbers.append(example['contest_number'])
-#                 example['info'] = info
-#                 examples.append(example) 
-#         return examples
-#     train_sft_unique = get_unique_dataset(train_sft, "train")
-#     test_sft_unique = get_unique_dataset(test_sft, "test")
-#     validation_sft_unique = get_unique_dataset(validation_sft, "validation")
-
-#     num_generation = 50
-
-#     # prompt_df = pd.DataFrame(train_sft_unique+test_sft_unique + validation_sft_unique)
-#     prompt_df = pd.DataFrame(test_sft_unique + validation_sft_unique)
-#     prompt_df = prompt_df[['contest_number', 'info', 'prompt']]
-#     prompt_df = prompt_df.sort_values(by=['info', 'contest_number' ], ascending=[False, True])
-#     for i in range(num_generation): 
-#         prompt_df["caption"+str(i+1)] = ""
-
-#     for i in range(len(prompt_df)): 
-#         row = prompt_df.iloc[i,:]
-        
-#         texts = [row['prompt']]*num_generation
-#         encoding = tokenizer(texts, padding=True, return_tensors='pt').to("cuda")
-#         with torch.no_grad():
-#             generated_ids = model.generate(**encoding, generation_config=generation_config)
-#         generated_texts = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)
-#         generated_texts = [gen[len(row['prompt'])+1 :] for gen in generated_texts]
-#         for j in range(num_generation): 
-#             prompt_df.iloc[i, j+3] = generated_texts[j]
-#     prompt_df.to_csv('generation/sft_gpto4_iter{}_results_50gen.csv'.format(case), index=False)
+    prompt_df = generate_captions(model, tokenizer, test_dataset_unique, generation_config, num_generation)
+    prompt_df.to_csv(os.path.join(output_dir, 'sft{}_gen{}.csv'.format(setting, num_generation)), index=False)
 
 # ################ Save DPO Result ################
 
@@ -324,7 +218,7 @@ def save_zs_results(MODEL_NAME, dataset_dir, output_dir, num_generation = 10):
 #     model.resize_token_embeddings(len(tokenizer))
 #     peft_model = PeftModel.from_pretrained(
 #         model=model,
-#         model_id =dir,
+#         model_id=model_checkpoint,
 #         device_map="cuda"
 #         # device_map="auto",
 #     )
@@ -467,7 +361,7 @@ def save_zs_results(MODEL_NAME, dataset_dir, output_dir, num_generation = 10):
 
 #     # peft_model = PeftModel.from_pretrained(
 #     #     model=model,
-#     #     model_id =dir,
+#     #     model_id=model_checkpoint,
 #     #     device_map="cuda"
 #     #     # device_map="auto",
 #     # )
@@ -771,9 +665,16 @@ def save_zs_results(MODEL_NAME, dataset_dir, output_dir, num_generation = 10):
 #     prompt_df.to_csv('llava_sft_gpto_c3_{}_results_50gen.csv'.format(step), index=False)
 
 def main(args):
+    seed_everything(2024) 
+    
     args.output_dir = os.path.join(args.output_dir, 'generation')
+    if not os.path.exists(args.output_dir):
+        os.makedirs(args.output_dir)
     if args.method == "zs":
-        save_zs_results(args.model_name, args.dataset_dir, args.output_dir, num_generation = 10)
+        save_zs_results(args.model_name, args.dataset_dir, args.output_dir, num_generation=args.num_generation, setting=args.setting)
+    if args.method == "sft": 
+        save_sft_results(args.model_name, args.dataset_dir, args.output_dir, args.model_checkpoint, \
+            args.new_padding_token, num_generation=args.num_generation, setting=args.setting)
     else: 
         raise ValueError("Pick a valid method from [zs, sft, dpo, ppo, llava, llava_sft] ")
     
@@ -782,10 +683,13 @@ if __name__ == "__main__":
     parser.add_argument("--dataset_dir", type=str, required=True, help="Your dataset path")
     parser.add_argument("--output_dir", type=str, required=True, help="Your dataset path")
     parser.add_argument("--method", type=str, required=True, help="Description for the caption generation method")
+    parser.add_argument("--setting", type=str, default="", required=False, help="The setting name that you want to save the results as")
     parser.add_argument("--model_name", type=str, default=None, required="mistralai/Mistral-7B-Instruct-v0.1",\
         help="The pretrained model that your model is (finetuned from)")
     parser.add_argument("--model_checkpoint", type=str, default=None,required=False, help="Your model_checkpoint")
     parser.add_argument("--num_generation", type=int, default=10, required=False, help="Number of caption generations per contest")
-
+    parser.add_argument("--new_padding_token", action="store_true", \
+        help="Add a new padding token to the tokenizer, please keep it consistent with your model checkpoint")
+    
     args = parser.parse_args()
     main(args)
