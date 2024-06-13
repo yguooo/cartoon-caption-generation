@@ -86,9 +86,6 @@ class gen_des:
             #test6 = base64.b64encode(image_data.iloc[image_data['cnum'].tolist().index(i)]['image_bytes']['bytes']).decode("ascii")
             #base64_image6 = test6
 
-
-            api_key = "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"
-
             headers = {"Content-Type": "application/json", "Authorization": f"Bearer {api_key}"}
 
             payload = {
