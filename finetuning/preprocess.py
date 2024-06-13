@@ -40,6 +40,7 @@ def preprocess_dpo(examples, sample_pairs_per_prompt=1000):
     Process the prompt for DPO/Reward modeling/PPO 
     '''
     dpo_data = {
+        'contest_number': [],
         'prompt': [], 
         'chosen': [],
         'rejected': []
@@ -57,6 +58,7 @@ def preprocess_dpo(examples, sample_pairs_per_prompt=1000):
        3*np.sqrt((ranking_data.iloc[chosen_caption_id]['precision']**2 + ranking_data.iloc[rejected_caption_id]['precision']**2)): 
                 entities = example['entities']
                 prompt = "scene: {} \n description: {} \n uncanny description: {} \n entities: {} \n funny caption: ".format(example['location'],example['canny'], example['uncanny'], ', '.join(entities)) 
+                dpo_data['contest_number'].append(example['contest_number'])
                 dpo_data['prompt'].append(prompt)
                 dpo_data['chosen'].append(str(ranking_data.iloc[chosen_caption_id]['caption']))
                 dpo_data['rejected'].append(str(ranking_data.iloc[rejected_caption_id]['caption']))
@@ -83,7 +85,7 @@ def preprocess_llava(examples, info):
         })
     return llava_data
 
-def process_llava_ft(examples, k = 1000):
+def process_llava_sft(examples, k = 1000):
     '''
     Process the prompt for LLaVA in the finetuning setting
     
@@ -167,12 +169,12 @@ if __name__ == "__main__":
     
     # Save the LLaVA prompt for finetuning purposes
     
-    train_llava_ft_data, test_llava_ft_data = process_llava_ft(df_train), process_llava_ft(df_test)
+    train_llava_sft_data, test_llava_sft_data = process_llava_sft(df_train), process_llava_sft(df_test)
 
-    if not os.path.exists(os.path.join(DATA_PATH, 'llava_ft_dataset')):
-        os.makedirs(os.path.join(DATA_PATH, 'llava_ft_dataset'))
+    if not os.path.exists(os.path.join(DATA_PATH, 'llava_sft_dataset')):
+        os.makedirs(os.path.join(DATA_PATH, 'llava_sft_dataset'))
 
-    with open(os.path.join(DATA_PATH, 'llava_ft_dataset', 'train_llava_ft_dataset.json'), 'w') as file:
-        file.write(json.dumps(train_llava_ft_data))
-    with open(os.path.join(DATA_PATH, 'llava_ft_dataset', 'test_llava_ft_dataset.json'), 'w') as file:
-        file.write(json.dumps(test_llava_ft_data))
+    with open(os.path.join(DATA_PATH, 'llava_sft_dataset', 'train_llava_sft_dataset.json'), 'w') as file:
+        file.write(json.dumps(train_llava_sft_data))
+    with open(os.path.join(DATA_PATH, 'llava_sft_dataset', 'test_llava_sft_dataset.json'), 'w') as file:
+        file.write(json.dumps(test_llava_sft_data))

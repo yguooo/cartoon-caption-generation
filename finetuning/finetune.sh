@@ -29,7 +29,7 @@ deepspeed --include localhost:2 llava/train/train_mem.py \
     --deepspeed ./scripts/zero3.json \
     --model_name_or_path llava-hf/llava-v1.6-mistral-7b-hf \
     --version v1 \
-    --data_path /data/yguo/mydataset/llava_ft_dataset/train_llava_ft_dataset.json \
+    --data_path /data/yguo/mydataset/llava_sft_dataset/train_llava_sft_dataset.json \
     --image_folder /data/yguo/mydataset/cartoons/ \
     --vision_tower openai/clip-vit-large-patch14-336 \
     --mm_projector_type mlp2x_gelu \
@@ -39,7 +39,7 @@ deepspeed --include localhost:2 llava/train/train_mem.py \
     --image_aspect_ratio pad \
     --group_by_modality_length True \
     --bf16 True \
-    --output_dir /data/yguo/myoutput/llava_ft/ \
+    --output_dir /data/yguo/myoutput/llava_sft/ \
     --num_train_epochs 1 \
     --per_device_train_batch_size 16 \
     --per_device_eval_batch_size 4 \
