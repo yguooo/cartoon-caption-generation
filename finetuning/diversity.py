@@ -46,7 +46,7 @@ def compute_diversity(lst):
     sim = np.inner(embeddings, embeddings)
     return np.mean(sim)
 
-def compute_overall_diversity(df, start_col=2, end_col=12):    
+def compute_cosine_SBERT(df, start_col=2, end_col=12):    
     diversity = []
 
     for _, row in df.iterrows():
@@ -66,6 +66,6 @@ if __name__ == "__main__":
     for file in files:
         print(file)
         df = pd.read_csv(file)
-        compute_overall_diversity(df)
+        compute_cosine_SBERT(df)
         compute_averageEAD(df)
 

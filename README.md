@@ -27,7 +27,7 @@ Prior to finetuning, you need to change the directory.
 ```
 cd finetuning
 ```
-and create several datasets with the following command:
+and create the train/test datasets for each of the generation method with the following command:
 ```
 python preprocess.py 
 ```
@@ -143,7 +143,7 @@ Since the finetune procedure can take from 1 day up to a week on an A100, we pro
 - `ppo`
 - `llava_sft`
 
-You can also see our sample caption generations from the pretrained model in this `examples/generations`
+You can also see our sample caption generations from the pretrained model on the test split in this `examples/generations`
 - `claude.csv`: 10 captions generated from Claude-3-Opus
 - `gpt4o.csv`: 10 captions generated from GPT-4o Vision
 - `zs.csv`: 10 captions generated from Mistral-Instruct-7B in a zero shot manner 
@@ -153,6 +153,7 @@ You can also see our sample caption generations from the pretrained model in thi
 - `ppo.csv`: 10 captions generated from PPO finetuned model of Mistral-Instruct-7B
 - `llava.csv`: 10 captions generated from LLaVA pretrained model (llava-v1.6-mistral-7b-hf)
 - `llava_sft.csv`: 10 captions generated from LLaVA finetuned model from (llava-v1.6-mistral-7b-hf)
+- `human_top.csv`, `human_200.csv`, `human_1000.csv`, `human_median.csv`: 10 captions from human contestants, at ranking 1-10, 200-209, 1000-1009, median
 
 
 # Citation 
