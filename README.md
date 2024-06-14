@@ -100,7 +100,16 @@ We provide all model checkpoints for finetuned models. Model checkpoints can be 
 - `llava_sft`
 
 You can also see our sample caption generations from the pretrained model in this `examples/generations`
--
+- `claude.csv`: 10 captions generated from Claude-3-Opus
+- `gpt4o.csv`: 10 captions generated from GPT-4o Vision
+- `zs.csv`: 10 captions generated from Mistral-Instruct-7B in a zero shot manner 
+- `zs_BoN.csv`: We first generated 50 captions using Mistral-Instruct-7B under zero-shot manner, then we use our finetuned reward model to pick the best 10 captions.
+- `sft.csv`: 10 captions generated from sft model of Mistral-Instruct-7B
+- `dpo.csv`: 10 captions generated from DPO finetuned model of Mistral-Instruct-7B
+- `ppo.csv`: 10 captions generated from PPO finetuned model of Mistral-Instruct-7B
+- `llava.csv`: 10 captions generated from LLaVA pretrained model (llava-v1.6-mistral-7b-hf)
+- `llava_sft.csv`: 10 captions generated from LLaVA finetuned model from (llava-v1.6-mistral-7b-hf)
+
 
 # Citation 
 

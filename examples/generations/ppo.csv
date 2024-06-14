@@ -1,455 +1,455 @@
-contest_number,info,prompt,caption1,caption2,caption3,caption4,caption5,caption6,caption7,caption8,caption9,caption10
-536,validation,"scene: a therapist's office 
+contest_number,prompt,caption1,caption2,caption3,caption4,caption5,caption6,caption7,caption8,caption9,caption10
+536,"scene: a therapist's office 
 description: A self-driving car is lying on a therapist's couch, while the therapist, a woman with glasses, is taking notes. 
 uncanny description: A car cannot lie on a therapist's couch and talk about its problems. 
 entities: Self-driving_car, Therapist 
 funny caption:",When you realize your therapy session just turned into an AI summit,It's not every day you see a car in therapy.,I guess we can call it 'talking therapy for machines',"It's not my job to fix your circuits, but I'll do my best.",When you realize that your car can talk to people but can't tell them how much it hates being stuck in traffic.,"So, I heard you had some issues with your brakes...","You didn't think I was capable of therapy without wheels, did you?","When your car can't drive itself anymore, it comes to therapy",It turns out that therapy isn't just for humans anymore.,I don't know what to make of this situation but I'm sure it has something to do with my anxiety.
-537,validation,"scene: a living room 
+537,"scene: a living room 
 description: A person is sitting in a living room talking to another person. In the background, a large roll of paper is being delivered through an archway by a delivery person. 
 uncanny description: It is unusual to have a giant roll of paper delivered to a living room. 
 entities: Delivery_person, Roll_of_paper 
 funny caption:",I guess they're trying to say 'big things come in big packages' but I think they meant it literally,Looks like we're having a paper party!,We were having a deep conversation about the meaning of life when a delivery person interrupted us with this massive paper roll.,It's just me and my endless paperwork.,When your neighbors surprise you with a massive package delivery,Why did the roll of paper cross the road? To get to our house!,"Why did the delivery man bring a piano? I don't know, but he certainly made my day.",Just had a huge paper party at my house! Who needs a pool? #papertime,Just received my monthly newspaper subscription... as a giant roll of paper.,Looks like we're having a party! (And I guess someone forgot their invitation)
-545,validation,"scene: a conference room 
+545,"scene: a conference room 
 description: A group of business people are sitting around a large conference table in a high-rise office. There is a plant sitting in a chair at the head of the table. 
 uncanny description: It is unusual for a plant to be sitting in a chair at a business meeting. 
 entities: Business_people, Plant 
 funny caption:",Is that...a plant?!,We have invited nature to join our discussion.,"We may be discussing strategies and budgets, but it's clear that this plant is the real boss.",When your boss invites you to a 'plant' meeting,When you realize your boss isn't coming to the meeting and it's just you and the plant.,Looks like someone's taking the lead role in this meeting.,When you say 'let's hear from the plants',Looks like we have an extra attendee! #plantmeeting,Nature's CEO is taking charge of this meeting.,Looks like our next meeting has already been botanized.
-550,validation,"scene: a large room with a piano 
+550,"scene: a large room with a piano 
 description: A man is sitting alone in a large room with several empty chairs. At the front of the room, a person is playing a piano. The room is decorated with paintings and has a large window with a cityscape view. 
 uncanny description: It is unusual for a person to be the only one in a large room while someone plays the piano. 
 entities: Pianist, Audience_member 
 funny caption:",I'm not sure what's more awkward - being the only one at a concert or playing the piano alone in a big room.,The pianist is the only one left in this world.,The ultimate concert for your solo self,When you're the only one at a concert,"It's not every day you get to play the piano with an audience of... well, just me.",The loneliest concert ever,Looks like the pianist was trying to make some noise but no one showed up.,This is the soundproof music hall for people who don't want to hear themselves play.,I guess you could say it was an empty concert hall.,"Wow, I guess the concert was over early."
-551,validation,"scene: New York Harbor 
+551,"scene: New York Harbor 
 description: A group of people are rowing a boat in the ocean near the Statue of Liberty. A giant wave with a face is about to crash down on them. 
 uncanny description: Waves don't have faces and don't appear to be alive. 
 entities: Rowboat, Statue_of_Liberty, Anthropomorphic_wave 
 funny caption:",We told her it was just a little choppy.,When you realize that water doesn't care if you live or die.,We didn't know we were getting into an aquatic horror movie,"When you said we were going out for some waves, I didn't expect this.","When you thought it was just another day at the office, but then an anthropomorphic wave appeared out of nowhere.",Looks like they forgot to check for tides.,When you finally get your hands on that big fish in the lake but it turns out to just be a giant wave with a face.,They should have known not to mess with Mother Nature!,"We were having so much fun in our rowboat until we saw the wave coming towards us. 'Oh wait, that wave has a face?' #RowBoatAdventures",The only thing more terrifying than the sea was the captain of our rowboat
-557,validation,"scene: the Garden of Eden 
+557,"scene: the Garden of Eden 
 description: A man and a woman are standing in a lush garden. The woman is holding a steaming pie and offering it to the man, while a snake is coiled around a tree branch above them. 
 uncanny description: Instead of an apple, the woman is offering a pie, which is anachronistic. 
 entities: Adam, Eve, Snake, Pie 
 funny caption:",When you realize that the Garden of Eden was actually just a potluck party with some really bad music,Adam and Eve's first date went sour when they realized their new home was crawling with snakes and Eve brought over her mom's famous pecan pie.,Looks like Adam's not getting his daily dose of fiber today.,It's not every day you get offered a cherry pie from a talking snake.,A classic 'you're-a-liar' moment in the Garden of Eden.,Why did Adam refuse Eve's offer? Because he didn't want to eat her apple pie!,When you finally realize that fruit isn't your only option.,Adam finally found his inner baker!,"When you said 'I want a piece of that', I didn't expect it to be a literal piece.",When you thought the story of Adam and Eve couldn't get any weirder.
-558,validation,"scene: a nursery 
+558,"scene: a nursery 
 description: A baby is sitting in a crib, holding a baby monitor. The baby looks like they are trying to communicate through the monitor. 
 uncanny description: Babies don't usually use baby monitors to communicate. 
 entities: Baby, Crib, Baby_monitor 
 funny caption:",I just realized I have been talking to my baby for 2 hours on their baby monitor and they haven't responded yet.,When you need a phone but can't reach it.,When you need an extra voice in your head to tell you if the cat's okay.,When you finally learn how to talk but you're still too afraid to say anything,Looks like this little one has already mastered the art of parenting,When you accidentally left your phone at home and now you have to rely on your baby's tech skills,Looks like this baby got their own personal assistant.,When you have an only child and try to teach them how to use a baby monitor,When you think you can handle being a parent until your baby starts talking and then they have their own way of communicating,"Wow, this kid has big ambitions for their first day of life."
-561,validation,"scene: an undefined space 
+561,"scene: an undefined space 
 description: Two dogs are facing each other with their heads inside a shared cone collar. 
 uncanny description: It is unusual for two dogs to share a single cone collar. 
 entities: Dogs, Cone_collar 
 funny caption:","They’re not twins, they just have the same taste in collars.",I'm sorry guys but I can only love one of you at a time,Two dogs in one cone collar? That's just bark-ing mad!,It's like they're sharing a kiss,"""Two birds of a feather..."" but these are just two mutts in a cone collar!","It's like they said, 'Two can play fetch.'",You better watch out for these double-barreled pups! They've got the whole world in their cone-sideration.,It's like they're saying 'We may have different fur but we can still bond over our love of being the center of attention.',“I guess I’m getting a little too friendly”,Sisters before Misters
-564,validation,"scene: an office 
+564,"scene: an office 
 description: A woman is standing in front of a desk in an office. Behind the desk, a man is sitting with several owls lined up on the desk in front of him. 
 uncanny description: It is unusual to see a man in an office with a group of owls on his desk. 
 entities: Man, Woman, Owls 
 funny caption:",Looks like someone's got their own personal owl-inventory team.,When you finally get that promotion and the boss assigns you your own personal owl assistant.,When you said 'bring your whole team' I didn't expect owls.,Looks like this guy has a hoot of a boss.,Looks like I'm working with some hootie and tootie!,Is this an owl-licious meeting or just me?,It's just me and my feathered friends at work.,Looks like we have a new boss at work! He's quite the bird.,Why do you have so many owls? Is it because you have 'owl-ternative' ideas?,Looks like this guy has a hoot of a boss.
-567,validation,"scene: a bedroom 
+567,"scene: a bedroom 
 description: A man is standing next to a bed, talking to another man who is dressed in a suit and holding a briefcase and a coffee cup while still in bed. The man in the bed looks ready for work despite being under the covers. 
 uncanny description: It is unusual for someone to be fully dressed for work and holding a briefcase while still in bed. 
 entities: Businessman, Bed 
 funny caption:",I guess they call this 'work from bed' now!,Just a regular day at the office,I guess they call this 'working from bed',Good morning Mr. Coffee Cup! You look ready for work today.,"Good morning, Mr. CEO! Are you sure about this whole 'work from home' thing?",Looks like this guy took 'work from home' to a whole new level.,I guess this is what they call 'dressing for success' from bed!,"The early bird gets the worm, but the late night owl gets the promotion.",Early bird gets the worm but it turns out early bird also gets an alarm clock and a boss.,"When you said you'd be late, I didn't expect you'd be on time."
-573,validation,"scene: a hospital room 
+573,"scene: a hospital room 
 description: A man is lying in a hospital bed with large headphones or a strange device on his head. A woman is sitting next to him, looking concerned. 
 uncanny description: The device on the man's head is unusually large and not typical medical equipment. 
 entities: Patient, Concerned_woman, Unusual_medical_device 
 funny caption:",When you have your own personal AI assistant but it keeps telling you to get off the couch,"I don't know what this thing does, but I'm pretty sure it's making my brain explode.",I guess they call this the 'Brainwave' treatment,I guess this means I'm officially a 'cyborg',Looks like someone has been bitten by the big data bug.,I didn't know I could listen to music and get better at the same time!,"When you said 'I need an upgrade', I didn't expect this.","Wondering why he's wearing such big headphones at the hospital? Well, it's not just music. He's trying to communicate with extraterrestrial beings from space.",When you thought your doctor was going to give you a regular checkup but ended up with an alien probing your brain.,When you finally get that 'Mind Meld' upgrade for your brain
-574,validation,"scene: a balcony 
+574,"scene: a balcony 
 description: A man and a woman are standing on a balcony. The man is holding a spatula and looking at a photocopier as if he is grilling something. The woman is holding a drink and looking at the man. 
 uncanny description: The man is using a photocopier as if it were a grill. 
 entities: Man, Woman, Photocopier 
 funny caption:",The ultimate way to cook dinner,When you need to make copies but don't have a barbecue.,Why don't we ever use our phones to call people anymore? Because they have too much paperwork.,When you're too lazy to go to the kitchen but still need a sandwich,"We're not sure how well this will work, but we'll give it a try.",When you realize that your boyfriend thinks his photocopier is a grill,When your wife asks why you're making copies of her favorite sandwich,"Say what? I'm not cooking a sandwich, I'm making a copy of my resume!",Today we're making copies of burgers,I guess you could say we're having a 'copy-grilled dinner'
-586,validation,"scene: a park or outdoor area 
+586,"scene: a park or outdoor area 
 description: A couple is walking their dog on a sidewalk. Above them, a giant vacuum cleaner is flying in the sky, with its hose extended downward. 
 uncanny description: Vacuum cleaners don't fly in the sky. 
 entities: Couple, Dog, Vacuum_cleaner 
 funny caption:",We were having a great day at the park until this flying vacuum cleaner ruined it.,I never realized how much our dogs resemble giant vacuum cleaners until I saw this flying one.,I guess this is what they call 'sucking it up'.,Sweeping away life as we know it,Why did the vacuum cleaner go to the park? To sweep away all of the dirt and dust.,Sweeping away life as we know it,I don't think our dog has ever seen anything like this before!,"Flying through the air, we encountered our worst fear - a vacuum cleaner!",I guess you could say we had a 'clean sweep' today,When you thought this subreddit couldn't get any weirder.
-598,validation,"scene: a mountain cave 
+598,"scene: a mountain cave 
 description: A man is standing in front of a guru who is sitting on an exercise ball outside a cave in a mountainous area. The guru appears to be giving advice or wisdom to the man. 
 uncanny description: It is unusual for a guru to be sitting on an exercise ball in a remote mountainous area. 
 entities: Guru, Exercise_ball 
 funny caption:",Just met my new fitness coach and he's teaching me how to climb mountains.,I asked my guru why she was sitting on an exercise ball in a cave and she said 'Because I want to get fit while you're stuck here.',When you're too broke to buy a chair but still want to look like a boss.,The ultimate in mind-body connection: enlightenment through core strength,When you asked your guru if they were a fitness enthusiast and they said yes,I asked my guru what he was doing here and he said 'I'm just stretching my mind',What did the exercise ball say to the guru? 'I'm feeling kinda flat.',It's not every day you encounter a wise sage on a rolling sphere,"I asked my guru how he was doing and he said 'I'm great, but I'm feeling a little flat.' So I gave him some air.",Sitting on a rock and rolling with the flow
-607,validation,"scene: an art gallery 
+607,"scene: an art gallery 
 description: A man is standing in an art gallery looking at a painting. The painting depicts people who appear to be looking back at him. 
 uncanny description: The people in the painting seem to be aware of the man looking at them. 
 entities: Art_gallery, Painting 
 funny caption:",I'm not sure if I should be flattered or creeped out by this painting.,Is this a mirror? Because I'm pretty sure it's just me.,I wonder if they can see me?,Looks like these guys are giving me the stink eye from beyond the canvas.,I guess you could say this painting was a little too on point.,Looks like they know I'm not going anywhere,I knew they were judging me when I walked into this room,"I guess it's true what they say, 'Everyone has their own perspective'. I didn't realize mine was so literally perspectival until I saw this painting.",Looks like I'm in a painting now!,I guess they really did see me.
-609,validation,"scene: a subway station 
+609,"scene: a subway station 
 description: Two people are walking through a subway station. Instead of a train, there is a giant sandwich on the tracks. 
 uncanny description: A giant sandwich is waiting at the subway station instead of a train. 
 entities: Subway, Train, Food 
 funny caption:",When you finally find a subway that isn't overcrowded.,When you get to the subway and realize it's just a giant sandwich,Today we're eating our way to work.,Today's commute was better than expected.,It's not every day you see a subway station with a giant sandwich.,We need to ask for directions.,When you're late for lunch but can't wait to get home,"When you said 'I'll meet you at the subway', I didn't expect it to be this big",Why did the tomato turn red? Because it saw the ham.,I guess this was our lucky day! We got to take the 'Subway Sandwich' instead.
-610,validation,"scene: a visiting room 
+610,"scene: a visiting room 
 description: A woman is sitting in a visiting room, talking on a phone. On the other side of the glass, a chef is also talking on a phone. 
 uncanny description: It is unusual for a chef to be in a visiting room behind glass. 
 entities: Woman, Chef 
 funny caption:",Chefs don't always get to do their job from behind bars.,Chef in visiting room? More like 'visiting' chef!,I guess it's a good thing chefs can cook from behind bars.,Calling all chefs: when can we start doing this?,It's not every day you get to talk to your favorite chef while wearing pajamas and slippers.,I guess they're having a culinary conference.,Chefs don't do visits,Breakfast at visiting room,Why did the chef visit his grandmother? Because he wanted to catch up with her over a good meal.,Visiting your relatives and they're already cooking up a storm
-611,validation,"scene: a city rooftop 
+611,"scene: a city rooftop 
 description: A pigeon and a small dragon are standing on the edge of a building rooftop in a city. The dragon is spreading its wings as if preparing to fly. 
 uncanny description: Dragons do not exist and cannot be seen on rooftops with pigeons. 
 entities: Pigeon, Dragon 
 funny caption:",What do you get when you cross a city rat with a mythical beast? An urban legend!,Looks like someone's got some feather envy,Squirrels can't believe their eyes,Looks like someone's getting ready for flight school.,When you thought your day couldn't get any weirder but then a dragon shows up.,Looks like I finally found my unicorn,Dragon at work,Dragon or bird? Looks like I'm about to get my winged dinner.,Looks like someone's been binge-watching Game of Thrones,Dragon and Pigeon have a bird's eye view
-613,validation,"scene: an interrogation room 
+613,"scene: an interrogation room 
 description: A suspect is being interrogated by two detectives in an interrogation room. One detective is leaning over the table, while the other is holding a balloon animal. 
 uncanny description: It is unusual for a detective to hold a balloon animal during an interrogation. 
 entities: Suspect, Detectives, Balloon_animal 
 funny caption:",When you realize your partner brought a balloon animal instead of evidence,When you're trying to get information out of someone but all they give you is popcorn.,When you're trying to crack the case but all you got is a bunch of helium and rubber.,When you're a detective and your partner has too much time on his hands.,"When you said 'balloon animals', I didn't expect it to be this big.",When you're a detective and your partner is great with kids.,Why did the detective bring a balloon animal? Because he wanted to make it talk!,I guess you could say this is a high-pressure situation.,"We may not have any leads, but at least we have a lead balloon.",What's next? A detective holding a unicorn?
-616,validation,"scene: an office 
+616,"scene: an office 
 description: A man is sitting at his desk in an office, looking at another man who is holding a small, identical version of himself. The small version is holding a piece of paper and appears to be talking. 
 uncanny description: The man is holding a miniature version of himself, which is not possible in reality. 
 entities: Office_worker, Miniature_self 
 funny caption:",I just realized I'm working with my doppelganger. He's so much smarter than me.,I finally found my doppelganger... but it's just a tiny version of myself holding a piece of paper.,When you have too much time on your hands,I just realized I've been working with a doppelganger the whole time.,I guess this is what they call 'me'-mini.,I finally found my doppelganger - he's just a little bit smaller.,Looks like I've finally managed to clone myself!,I'm so glad I got my own personal assistant.,I found my doppelganger... but he's just a small version of myself.,When you finally meet your doppelganger but it's just a tiny version of yourself that can talk.
-629,validation,"scene: an indoor climbing gym 
+629,"scene: an indoor climbing gym 
 description: A woman is rock climbing on an indoor climbing wall. One of the climbing holds is shaped like a human face. 
 uncanny description: Climbing holds are not typically shaped like human faces. 
 entities: Climber, Climbing_wall 
 funny caption:","She's got grip, but she's also pretty face-tastic.",When you thought your workouts were mundane but then your climbing hold turns out to be a life-sized uncanny valley.,When you find your dream job and it's also literally your dream hold.,I don't know if I'm holding onto life or a face.,Looks like I found my new BFF,"I'm not afraid of heights, but I am afraid of this hold. It looks too much like me.",I finally found my soulmate. It's a climbing hold that looks just like me.,I guess it's a face-lift for the climbing wall,Looks like my hold just got a little creepy.,When your best friend is also your climbing partner
-636,validation,"scene: a construction site high above the city 
+636,"scene: a construction site high above the city 
 description: A group of construction workers are sitting on a steel beam high above the city, eating lunch. Among them is the Grim Reaper, holding a scythe. 
 uncanny description: The Grim Reaper is casually sitting and eating lunch with the construction workers. 
 entities: Construction_workers, Grim_Reaper 
 funny caption:","When you said 'death by construction', I didn't expect it to be so literal.",Looks like death took a break from his job to have some lunch with the boys.,Death by Lunch Break,Looks like Death took a break from his usual duties to enjoy some fresh air and good company.,We were just having some lunch when the Grim Reaper showed up.,Looks like death has stopped by for lunch at the construction site.,"The Grim Reaper may be death personified, but he's just like any other worker at this construction site - taking breaks to eat lunch.","The Grim Reaper may be an ominous figure, but he's just like any other construction worker. Eating lunch and enjoying the view.",Sometimes you just gotta cut to the chase,Looks like someone's cutting corners.
-637,validation,"scene: a yard 
+637,"scene: a yard 
 description: A man is raking leaves in a yard while another man stands behind a rope barrier, watching him. 
 uncanny description: It is unusual for someone to be raking leaves while another person stands behind a rope barrier observing them. 
 entities: Rake, Observer 
 funny caption:",When you have an audience for your leaf-raking skills,When your neighbor asks you over but doesn't want any of their yard work.,I'm just here to make sure the grass doesn't get raked up.,Is that a yellow card or just a leaf?,I guess you could say this guy is leaf-peeping,I guess it's safe to say I'm quite the leaf-raker.,I guess you could say I'm leaf-peeping!,Looks like the only thing this guy knows how to do is watch.,Looks like I'm the only one getting some exercise today.,When you're too lazy to mow the lawn but still want to look like you're working.
-646,validation,"scene: a snowy mountain 
+646,"scene: a snowy mountain 
 description: Two hikers are on a snowy mountain slope, having a conversation. In the background, a yeti is walking up the slope. 
 uncanny description: It is unusual to encounter a yeti while hiking. 
 entities: Hikers, Yeti 
 funny caption:",Looks like we have some company on our snowy adventure!,Looks like we have some competition for who can walk in the deepest snow.,Looks like we have some company on our hike today,Looks like we're not the only ones feeling the chill today.,Looks like we have some company on our hike.,Looks like we have some company on our hike!,Looks like we have a new friend joining us on our hike!,We were just making small talk about the weather when we saw a bigfoot.,Hike and Seek,Looks like we have some competition for who can make it to the top first!
-661,validation,"scene: a fairytale landscape 
+661,"scene: a fairytale landscape 
 description: Snow White is standing and smiling while the seven dwarfs are roller skating around her in a joyful manner. There is a castle in the background. 
 uncanny description: The seven dwarfs are roller skating, which is anachronistic for their time period. 
 entities: Snow White, Seven Dwarfs, Roller Skates 
 funny caption:","When you said 'roll with it', I didn't expect this.",When your friends suggest you go ice skating but all you have are roller skates.,Rolling with the dwarfs,Snow White found out she could rollerblade too!,"When you said the prince was charming, I didn't expect him to be on roller skates!","When you said you were bringing me to a ball, I didn't expect it to be on ice!","When you said 'happily ever after,' I didn't think it meant 'on roller skates.'","When you say 'roll', I expect a horse, not a wheel!",Roller dwarf-ing,"When you say 'happily ever after,' I take it to mean roller skating."
-663,validation,"scene: a kitchen 
+663,"scene: a kitchen 
 description: Two people are looking at a pizza box on a table. Inside the pizza box, there is a miniature scene of two people having a romantic dinner. 
 uncanny description: It's unusual to find a miniature dinner scene inside a pizza box instead of a pizza. 
 entities: Pizza_box, Miniature_people 
 funny caption:",Look what we found in our pizza! A tiny version of us enjoying a romantic dinner.,Look what you get when you order a 'romantic dinner' from Domino's,When you order pizza and it comes with an extra surprise,I guess this was their 'pizza night',When you order a large pizza but only want a small portion,When you order pizza but accidentally get a miniature wedding.,When you order pizza and get a full meal for free!,"Our love story in a nutshell (or should I say, a pizza?)",We got the whole nine yards...and then some.,"It's like a tiny version of our favorite Italian restaurant, only this time it's in a pizza box."
-681,validation,"scene: a city street 
+681,"scene: a city street 
 description: A man and a woman are walking down the street. The man has crab claws instead of hands, and the woman looks annoyed. 
 uncanny description: It is unusual for a person to have crab claws instead of hands. 
 entities: Man, Crab_claws, Woman 
 funny caption:",I guess I'm not that human anymore.,Why did the crab cross the road? To get to the other side... of his house.,"When you said 'we're going crabbing,' I didn't expect this.",I guess he found his true calling as an astrologer.,I guess he's just an octopus in human clothing,When you said we were having seafood tonight I didn't expect this!,Looks like this guy didn't take his shell off.,Why did the crab cross the road? To prove he was more than just shellfish!,I guess he wanted to be shellfish.,Why did the crab go out with the human? Because he heard she had great legs!
-685,validation,"scene: a forest 
+685,"scene: a forest 
 description: Two hikers in the woods encounter a giant honey bear bottle with a spout on its head. The hikers look surprised and cautious. 
 uncanny description: A giant honey bear bottle with a spout on its head is walking in the woods, which is not something you would ever see in real life. 
 entities: Hikers, Anthropomorphic_honey_bear 
 funny caption:",When your friend tells you they found a new source of inspiration for their next novel but it's just a giant honey bear bottle walking in the woods,Looks like someone had too much honey,I guess they're saying 'bear-ly' too much,What's that? A honey-filled bear?,When you're thirsty and stumble upon a giant honey bear bottle in the middle of nowhere,When you're out hiking and come across a giant honey bear with a spout on its head.,Oh no! It looks like we found ourselves in a sticky situation!,When you find out that nature has been working on the perfect blend of beer and honey,What did one hiker say to the other? 'I heard there's honey at the end of that trail.' But it turned out to be just an anthropomorphic honey bear with a spout on its head.,Why did the anthropomorphic honey bear bottle go for a walk in the woods? Because it wanted to take a sip of nature's sweetness!
-695,validation,"scene: a restaurant entrance 
+695,"scene: a restaurant entrance 
 description: A waiter is standing at a podium, looking surprised at a slice of bread with a face, arms, legs, and a bow tie. 
 uncanny description: Bread does not have human features or wear bow ties. 
 entities: Waiter, Anthropomorphic_bread 
 funny caption:",This place has some weird menu items.,I think I just saw my double in a loaf,Waiter: 'What is this?!' Me: 'This is the new menu item.' Waiter: 'I think I'll stick to my old job.',"Looks like we've got a new member of the staff! Welcome, Baguette-Boy!",When you ask for the special and get a talking loaf of bread.,I never thought I'd see the day when my job became serving a baked loaf.,I think the chef needs to take his artistry lessons from Michelangelo.,When you say 'I want to go somewhere nice for dinner'. You didn't mean this place!,I never knew bread could be so... savory.,I never thought I'd see the day when bread would be my muse
-696,validation,"scene: a dining room 
+696,"scene: a dining room 
 description: A cowboy is pouring coffee from a pot into a coffin that is placed on a dining table. Two people in formal attire are sitting at the table, looking at the cowboy. 
 uncanny description: It is unusual and unsettling to see a cowboy pouring coffee into a coffin at a dining table. 
 entities: Cowboy, Coffin, Diners 
 funny caption:",It's just a friendly neighborhood barista.,I guess you could say this is a funeral dinner,The ultimate Western-themed dinner party!,Looks like we're having an old west wake up call!,I guess they wanted to make sure the afterlife was well-caffeinated.,Morning brew with a side of death.,Breakfast of champions!,When you're hosting a fancy dinner but still have some old west traditions to uphold,We're just having a casual cup of Joe.,Morning brew in a dead guy's coffin.
-697,validation,"scene: a train station 
+697,"scene: a train station 
 description: A man is walking the plank off a train, while a pirate and another person watch from the train door. 
 uncanny description: It's unusual to see a pirate making someone walk the plank off a train instead of a ship. 
 entities: Pirate, Train, Plank 
 funny caption:",Train Station Pirates,I thought pirates only made people walk the plank on ships... I guess you can call this a 'train-cation',I guess we could call him Captain Hookoff,Look out below!,You thought the train ride was scary? Wait until you see this guy walk the plank off the train!,Welcome to the train ride of your life!,Oh no! You forgot we have access to trains now!,Looks like this guy didn't get his ticket at a discount,I guess they didn't have a bridge??,This is what happens when you mess with the wrong pirate
-700,validation,"scene: a pharmacy 
+700,"scene: a pharmacy 
 description: A centaur is standing at a pharmacy counter, talking to the pharmacist. The centaur is holding a prescription bag. 
 uncanny description: Centaurs are mythical creatures and do not exist in real life. 
 entities: Centaur, Pharmacist 
 funny caption:",I guess you could say I'm quite the horse-man of health,What do you get when you mix a horse with an elf? A pharmacist!,"I told my doctor I was having trouble with my hooves. He said 'Have you tried talking to your pharmacist?' I said 'My pharmacist is a centaur.' He said 'Well then, maybe you should see another doctor.'","When you thought your day couldn't get any better, but then you realized you need to refill your meds.","I told the pharmacist I needed some advice on how to cure my bowel problems, he said 'well, you're a centaur so you might want to try eating more grass'",I came to this pharmacy to pick up my penicillin but the pharmacist said I needed to be circumcised first.,I need some medicine for my sore butt,"I guess I could have just gotten it online, but where's the fun in that?",When you have a horse-shaped butt but still need your meds.,"I don't get it, why can't I just eat my pain medication?"
-701,validation,"scene: a restaurant 
+701,"scene: a restaurant 
 description: A waitress is taking an order from a mouse that is sitting at a table and holding a menu. Other patrons are visible in the background. 
 uncanny description: Mice do not sit at tables and order food from menus in restaurants. 
 entities: Waitress, Mouse, Menu 
 funny caption:",When you're trying to be fancy but can only afford ratatouille,When you finally find a place where mice can enjoy fine dining.,"I guess it's true what they say - you can catch more flies with honey than with vinegar, but you can also catch more mice with menus!",When you're the only one brave enough to try sushi at a rodent-only establishment.,The only thing scarier than rodents on the menu was a rat with the same name as me.,When you're too small to reach the counter but still want your own meal,When you go to a fancy rodent restaurant,When you realize your date is a mouse.,When you finally decide to eat out but have no idea what to get.,"You may think it's weird to see a mouse in a restaurant, but trust me, they have their own special menu."
-706,validation,"scene: a forest 
+706,"scene: a forest 
 description: Two hikers with backpacks and walking sticks are walking through a forest. They come across two subway trains labeled ""2"" and ""A"" in the middle of the woods. 
 uncanny description: Subway trains do not belong in the middle of a forest. 
 entities: Hikers, Subway_trains 
 funny caption:",When you think you're lost in the wilderness but end up finding your way to Times Square.,Lost in Transit,I guess this is how we get to Paris.,It's always a train-wreck when you go on a hike 😂 #hikerlife,Wood line service now available on the E train.,Where did the subways go wrong?,"We found our way to the city, but it was a little off-track.",Forest or subway? Can't tell,When you thought you were just going for a walk in the park but ended up in an underground transport system.,We found ourselves on the wrong track and ended up in the underground instead.
-709,validation,"scene: an office building 
+709,"scene: an office building 
 description: A woman with a briefcase is waiting for an elevator. The elevator doors are open, revealing people inside who appear to be engulfed in flames. 
 uncanny description: Elevators do not typically contain people who are on fire. 
 entities: Elevator, Flames, Office_worker 
 funny caption:",Well at least I'll have a heated lunch break.,I guess I should have checked the weather before heading into work today.,I guess this is how the company really wants me to feel about their new product line.,I guess it's a hot topic.,I guess they were just having a hot topic meeting.,Elevator pitch gone wrong,Looks like this elevator was going up in flames.,"I thought elevators were supposed to take you up, not down... or on fire.",I guess they take the heat seriously around here.,I guess the elevator was 'hot' today
-717,validation,"scene: a living room 
+717,"scene: a living room 
 description: Two people are sitting on a couch in a living room. A giraffe's head is poking up through a hole in the floor in front of them. 
 uncanny description: It is unusual to see a giraffe's head coming up through the floor in a living room. 
 entities: Giraffe, People 
 funny caption:",Who put that giraffe down there?!,Why did the giraffe come into our living room?,It must be casual Friday at the zoo.,Looking up at life from a different perspective,Looks like our next houseguest is a little tall,Why do we always invite guests who are tall and have long necks?,Looks like someone forgot to water the plants,We were having a party when we suddenly realized that our guests had brought along an unexpected guest.,Having a giraffe day,Why do we always have wild animals in our homes?
-721,validation,"scene: a playground 
+721,"scene: a playground 
 description: Two children are playing in a sandbox. One child has built a tall sandcastle tower and is inside it, looking out from a window. The other child is kneeling outside the tower, adding more sand to it. 
 uncanny description: It's unusual for a sandcastle to be tall enough for a child to sit inside. 
 entities: Children, Sandbox, Sandcastle 
 funny caption:",Looking down on the world from my sandcastle throne.,Looking good from the inside out!,Looking out from my castle of sand.,When you're too short to reach the top of your own sandcastle.,When you're too short to reach the top of your own sandcastle,Looking out of my castle wall while my friend builds me up.,Looking down at your kingdom from high above.,Looking good from up here! But I don't think we can go on a vacation just because of my amazing architectural skills.,When you finally build a castle that's taller than you.,I guess you could say I'm quite the castle builder.
-729,validation,"scene: a castle 
+729,"scene: a castle 
 description: Two royals, a king and a queen, are lounging in a hammock inside a castle. A guard is standing at the entrance, watching them. 
 uncanny description: It is unusual for royalty to relax in a hammock inside a castle. 
 entities: King, Queen, Guard, Hammock 
 funny caption:",The only thing more relaxing than a massage would be a hammock with your queen.,Relaxin' like royalty... or just swinging low.,"Two birds of a feather, hanging out in their royal nest.",Looks like they're trying to swing their way out of this castle,Looks like they're swingin' away their troubles,Looks like they're taking their royal relaxation to the next level.,It's not every day you see a king and a queen lounging around like commoners.,Is this what they call 'Royal Relaxation'? I guess it's better than being locked up in a dungeon.,"Their Majesties are enjoying a little R&R, while their subjects wonder if they've gone mad.",Royal relaxation
-730,validation,"scene: a laboratory 
+730,"scene: a laboratory 
 description: A scientist is talking to a mouse wearing a lab coat in a laboratory. They are both holding clipboards and discussing something. 
 uncanny description: It is unusual for a mouse to be dressed as a scientist and working in a lab. 
 entities: Scientist, Mouse 
 funny caption:",Why did the mouse go to the doctor? Because it had a bad case of rodent-itis!,"When you said you wanted to take over the world, I didn't think it would involve a tiny lab coat.",The mice have taken over the lab!,The mice are taking over the world one experiment at a time!,When you finally get your PhD but it's in rodentology,"When you told me I was getting a new pet, I didn't expect her to have a PhD.","When you said you wanted a mouse assistant, I didn't expect it to be this...furry.",It's the lab where mice rule supreme!,I guess mice can't resist the allure of science.,When you're a genius mouse in a lab
-746,validation,"scene: prehistoric landscape 
+746,"scene: prehistoric landscape 
 description: Two cavemen are in an open area. One caveman is standing on top of a tall, uneven stone staircase, while the other caveman is standing on the ground looking up at him. 
 uncanny description: The stone staircase is unusually tall and uneven for a primitive setting. 
 entities: Cavemen, Stone_staircase 
 funny caption:","I told my friend he was too short to reach the top shelf, so he went and got himself a ladder.",Just because we're cave people doesn't mean we can't have high standards,"Wow, this guy really knows how to take things to the next level.",I'm gonna rock this caveman fashion show,What do you call a caveman with bad posture? A rockstar.,When you're finally able to see the stars from your backyard.,Why did the caveman go to the gym? To climb these stairs!,"Hey buddy, do you need help climbing that?","I'm not afraid of heights, I just can't handle the unstable ground.",I can't believe I have to climb all these stairs just to get to my bed.
-748,validation,"scene: inside a large tunnel 
+748,"scene: inside a large tunnel 
 description: Two chefs are standing inside a large, ribbed tunnel. They are holding kitchen utensils and looking around. 
 uncanny description: It is unusual for chefs to be inside a tunnel that looks like the inside of a giant creature. 
 entities: Chefs, Kitchen_utensils 
 funny caption:",Chef's special? Inside-out lasagna!,"We're not lost, we're just finding our way out of this giant mushroom.",What do you call two chefs in a big tunnel? A couple of mice on a kitchen adventure.,We're not in the kitchen anymore,"What's this? A cave-in? Oh wait, it's just a fancy underground dining room.",What do you call two chefs in a tunnel? A double chef-in!,"When you said 'the underground kitchen', I didn't expect it to be this... *laughs*","We found ourselves in the belly of the beast, but we're not afraid. We've got our knives and spoons ready for whatever comes our way.","We're just two chefs in a big ol' tunnel, making our way out with some delicious food.",When you're a chef and your boss asks you to cater an alien invasion.
-750,validation,"scene: a field 
+750,"scene: a field 
 description: Two shaggy dogs are standing in a field surrounded by a group of sheep. The sheep and the dogs have similar fluffy appearances. 
 uncanny description: The sheep look almost identical to the dogs, which is unusual. 
 entities: Dogs, Sheep 
 funny caption:","These two can't decide if they want to be sheep or dogs, so they just settled for being fluffy furballs.",I don't know what kind of sheepdog they have over there!,Who's who in this fluff fest?,The sheep were wondering what kind of dogs they had adopted,I thought we were having a dog party but it turned out to be a wool-fest,Who's who?,I'm sorry but I think you two are a little too much alike.,"I told my friend he was acting too much like a sheep, and she said I was being too judgmental.",I guess these dogs were feeling a little sheepish today!,The woolly reunion
-754,validation,"scene: a fire station 
+754,"scene: a fire station 
 description: Two firefighters are standing next to a fire pole, looking down at the hole in the floor where the pole goes through. 
 uncanny description: The fire pole seems to go through the floor into an endless void. 
 entities: Firefighters, Fire_pole 
 funny caption:",I guess this is why they call it 'going down the pole',We have no idea what's down there but we know it's not worth falling for.,"Two firefighters, one fire pole, and an unending void of nothingness. Sounds like your typical day at the office!",Looks like someone forgot to put a firetrap at the end of that pole.,Why did the firefighter cross the road? To get to the other side of the void.,We're just here to watch the world burn,We're just here to make sure no one falls into the fire,What do you call a black hole that's also a fire pole? A 'Flame' of gravity.,When you think your boss is a jerk but he just wants you safe,Looks like we need a new floor.
-757,validation,"scene: a park 
+757,"scene: a park 
 description: A couple is having a picnic in a park. They are looking up at the sky where the clouds have formed an angry face. 
 uncanny description: Clouds don't form faces, especially not angry ones. 
 entities: Picnic, Cloud_face 
 funny caption:",When you thought your day couldn't get any worse and then the clouds give you the stink eye.,"I told her we shouldn't come here today, but she said it was supposed to be sunny. Look what I get for listening to her.",Looks like we should pack up and leave before we get on the wrong side of the weather.,Looks like we got served lemons and lemonade,"Looks like we have to go back home now, it's too cloudy.",Looks like our day has taken a turn for the worse. Guess we should start with dessert before the storm hits.,Looks like our perfect day just turned stormy.,I guess we should move to another park.,Looks like someone needs to take their meds,"It's raining cats and dogs, but that's nothing compared to this cloud's mood."
-543,test,"scene: a living room 
+543,"scene: a living room 
 description: A large elephant is standing in the middle of a living room. Two people are sitting on chairs, seemingly ignoring the elephant. 
 uncanny description: It is highly unusual to have an elephant inside a living room. 
 entities: Elephant, People 
 funny caption:",Living my best life with my new pet elephant,When you said 'bring home a big pet' I didn't expect this.,It's always nice to have an extra guest over,Who needs a couch when you can have a pachyderm?,I guess they wanted their own personal masseuse,Why did the elephant break into my house? Because it heard there was no way out.,When you realize your mom accidentally left the elephant inside,When you invite your friend over and they bring their whole family,When you promised your parents a pet but forgot to tell them how big it would be,You might wonder why there's an elephant in my living room. The answer is 'Why not?'
-544,test,"scene: an office environment 
+544,"scene: an office environment 
 description: Two men are standing and talking to each other. On top of their heads, there are miniature office workers sitting at desks, working on computers. 
 uncanny description: It is unusual to have miniature office workers on top of people's heads. 
 entities: Office_workers, Heads 
 funny caption:",These guys look like they could use some paperclips.,I guess this is what happens when you work too hard!,"I thought the boss was asking me to do some paperwork, but it turned out he just wanted me to carry his desk.",It seems like these guys have a little too much paperwork in their heads.,When you put too much work on your head,"Headless offices, where work never stops.",Headphones,I was just talking about how much I hate paperwork when my boss put a tiny paperweight on my head.,The boss wanted us to be more productive so he put some extra pressure on our shoulders.,The ultimate multitasking. Work while you walk!
-548,test,"scene: a rural road 
+548,"scene: a rural road 
 description: A police officer has pulled over a futuristic rocket car on a rural road. The driver is sitting in the rocket car while the officer stands beside it, writing a ticket. 
 uncanny description: Rocket cars are not typically seen on rural roads and are not usually pulled over by regular police. 
 entities: Police_officer, Rocket_car 
 funny caption:",When you get caught speeding in a rocket car,Looks like someone left their planet at the wrong exit.,This guy must've gone too fast,Looks like someone got caught speeding through space!,"When you said 'rocket' speeding, I didn't expect this.",Looks like this guy left planet earth without permission,When you're driving a rocket car but still get a speeding ticket,Why did the rocket car get pulled over? Because it was going too fast for its own good!,Looks like I'm going to be cruising with my ticket to the moon!,"Rocket car or not, I'm still getting you to pay that speeding ticket."
-553,test,"scene: a post-apocalyptic landscape 
+553,"scene: a post-apocalyptic landscape 
 description: Two people are sitting on rocks in the middle of a post-apocalyptic landscape. They appear to be having a casual conversation despite the destruction around them. 
 uncanny description: It's unusual for people to have a casual conversation in the middle of a devastated, smoking wasteland. 
 entities: People, Destruction 
 funny caption:","Hey, what's up? The world is ending. Anything new?",Looks like we made it through the apocalypse together. I guess that makes us survivors.,Casual Friday at your local nuclear winter.,Post-Apocalypse: Where you go from 'How are you?' to 'Are you okay?',It turns out that small talk is an excellent coping mechanism when faced with the end of the world.,We were really hoping for some Netflix and chill but we settled for ruins and chitchat.,"Looks like the world is ending, but at least we still have each other.",Why did they bring chairs and snacks? We should be scavenging for resources.,Post-Apocalypse: The Great Debate,Post-Apocalypse or just bad hair day? I guess it's all relative.
-568,test,"scene: a social gathering 
+568,"scene: a social gathering 
 description: A woman is holding a glass and talking to two people who are tied up and standing in buckets. The scene appears to be at a social gathering. 
 uncanny description: It is unusual for people to be tied up and standing in buckets at a social event. 
 entities: People, Buckets, Rope 
 funny caption:","Well well well, looks like I stumbled upon the perfect excuse to avoid awkward conversations!",These guys look like they're just having a bucket list moment,Looks like we're in a human pinata!,Welcome to the bucket club!,Looks like I'm hosting my own human bingo night!,I don't know why these guys thought it was a good idea to come to the party like this.,I never thought I'd meet my soulmates while they were tied up in buckets,"At this party, the punch bowl was a bit out of reach.","At our last party, we had some interesting guests.",When you said you were bringing your 'art project' to the party.
-575,test,"scene: a grassy field 
+575,"scene: a grassy field 
 description: Two ancient warriors on horseback are leading a procession of modern businessmen carrying briefcases through a grassy landscape. 
 uncanny description: It is unusual to see ancient warriors leading a group of modern businessmen. 
 entities: Ancient_warriors, Businessmen 
 funny caption:",Meet the new boss... same as the old boss,It seems like history has decided to take over the corporate world.,I guess the old ways aren't always dead,It's not your typical office meeting.,The ancient and the corporate have merged.,From the past to the future: How we're all riding horses.,"They say history doesn't repeat itself, but maybe they just haven't seen the right people on the wrong horses.",A battle for the future: who will win? The sword-wielding warrior or the suitcase-toting businessman?,When your boss asks you to lead a meeting in medieval attire,The past and present collide in this bizarre parade.
-576,test,"scene: a park or garden 
+576,"scene: a park or garden 
 description: A woman is standing in front of a tree. Hanging from one of the branches is a cocoon with a human face emerging from it. 
 uncanny description: Cocoons do not have human faces emerging from them. 
 entities: Woman, Tree, Cocoon 
 funny caption:",I guess I'm not just a tree anymore!,Looks like someone's been hatching some new ideas.,I knew this tree was special when I saw the spider on it.,Looks like someone decided to take their work home,I found my new best friend at the park today! She's always looking out for me and will never leave me hanging.,I guess this tree must be having a baby,I guess nature was feeling a bit self-conscious today,Looks like someone's got a case of the 'cocoon flu',Looks like I'm growing my own little buddy!,I guess nature really does have its own reality TV show.
-578,test,"scene: a restaurant 
+578,"scene: a restaurant 
 description: A couple is having a quiet dinner at a restaurant. Suddenly, a waiter rushes in with a pizza, followed by a crowd of paparazzi taking photos. 
 uncanny description: It's unusual for paparazzi to follow a waiter into a restaurant. 
 entities: Couple, Waiter, Paparazzi 
 funny caption:","When you least expect it, your average Tuesday night becomes an international incident.",Paparazzi following the only person who hasn't been photographed yet,When the chef cooks like Beyoncé,"When you least expect it, your meal turns into a red carpet event.",I guess our date wasn't private enough.,When your date wants to be famous but you just want some peace and quiet,I guess the chef really put some effort into making that pizza look good.,When you thought the only drama was what toppings to put on your pizza,Just another night at the celebrity hotspot.,I guess they were just trying to get a good shot of the menu.
-579,test,"scene: a living room 
+579,"scene: a living room 
 description: Two people are sitting on separate couches, facing each other. Between them, a cat is lounging on a throne, wearing a crown and a royal robe. 
 uncanny description: It is unusual for a cat to be treated like royalty and sit on a throne with a crown. 
 entities: Cat, Throne 
 funny caption:","When you told me I was going to have to share my throne with a cat, I didn't believe you.",The cat's meow was as loud as the king's!,When you want your feline friend to feel like the king of the jungle.,Cats reign supreme in this living room.,Looks like we have our own little king here,When your cat becomes a queen/king,I guess you could say this feline is quite the 'cat' ruler,When you're the king of your own kingdom.,I'm the king of this living room!,When you finally give your cat the respect they deserve
-590,test,"scene: a prehistoric cave 
+590,"scene: a prehistoric cave 
 description: A dinosaur is drawing cave paintings on the wall while two cavemen watch from the entrance of the cave. 
 uncanny description: Dinosaurs and humans did not coexist, and dinosaurs did not create cave paintings. 
 entities: Dinosaur, Cavemen, Cave_paintings 
 funny caption:",Dino-artist meets his caveman critics,"When you said 'dino-human collaboration', I didn't think it meant 'dino-caveman collaboration'","I know what you're thinking, 'how could a dinosaur draw cave paintings?' Well, it's a long story involving time travel and some serious artistic skills.",It's amazing what you can do with the right tools!,I guess we could say this is the #dinoart movement,Dino-stagram,A prehistoric artist's studio,"When you said you were bringing back extinct creatures to life, I didn't expect them to be artists too!",When your cave painting partner asks you to draw them as a T-Rex,When you realize the caveman's artistic skills are way better than yours
-600,test,"scene: a spaceship 
+600,"scene: a spaceship 
 description: Three aliens are standing in a spaceship, looking at a dog that is sitting in the middle of the room. The spaceship has large windows showing outer space. 
 uncanny description: Aliens and dogs don't usually interact in a spaceship. 
 entities: Aliens, Dog 
 funny caption:",Who needs oxygen when you have puppy breath?!,"We don't get many visitors on this ship, but this little guy sure knows how to make himself comfortable.","Our new co-pilot barks a lot, but he always gets us to where we need to go.",Why did the aliens take the dog on their spaceship? They heard he had a 'starry' eye!,Intergalactic Friendship Goals,Why did the alien bring his own couch to the spaceship? Because he was a furry!,I guess they really mean 'man's best friend',Aliens trying to figure out how to get this furry creature back home.,Who knew outer space was such a great place for a puppy date?,We didn't expect to find this alien creature on our ship!
-603,test,"scene: a mountain ledge 
+603,"scene: a mountain ledge 
 description: A hiker has climbed up a mountain and is looking at a wise man sitting on a ledge. In the background, there are people sitting at tables as if they are in a restaurant. 
 uncanny description: It's unusual to see a restaurant setup on a mountain ledge. 
 entities: Hiker, Wise_man, Diners 
 funny caption:",I guess you could say this guy is quite the high-altitude philosopher.,Wow this hike is really taking me places,I finally found my 'mountain view'. But why is everyone eating?,Looking for wisdom? Look no further than this guy. Or maybe just ask your server for some pasta.,I asked the wise man what he was doing here. He said 'This view is too good to miss!',I guess you could say this place is high-altitude dining.,When you finally reach the top of the mountain but realize you forgot your phone charger,"Hiking is great, but sometimes you need a break from nature to enjoy some overpriced fries.",I guess you could say this is a high-altitude dining experience.,Looking for enlightenment? Just ask the guy who sat down for lunch.
-604,test,"scene: a cave 
+604,"scene: a cave 
 description: A caveman is painting a picture of a mammoth on the wall of a cave. A real mammoth is standing nearby, watching him. 
 uncanny description: The mammoth seems to be observing the caveman's artwork as if it understands. 
 entities: Caveman, Mammoth, Cave_painting 
 funny caption:",Looks like I have my own personal art critic.,Caveman says 'I guess you could say I'm a natural artist.' Mammoth looks at him and nods in approval.,The caveman's greatest achievement? Painting a mammoth in a cave,When you finally finish your masterpiece and the subject comes to life,"When you say 'I want to paint a mammoth', but really you just mean a 'mammoth-tion'",Looks like this caveman has a big fan in the wild.,Looks like the caveman just wants a little more space.,When you finally finish that 40-hour shift at work and all your friends are out partying.,I guess you could say this caveman is a real artist,You got your big fan right here!
-615,test,"scene: a dock 
+615,"scene: a dock 
 description: Two men are sitting on a dock, fishing. One of them has caught a chandelier with his fishing rod. 
 uncanny description: It is highly unusual to catch a chandelier while fishing. 
 entities: Fishermen, Chandelier 
 funny caption:",We caught a light one!,Looks like our day just got brighter.,"We may not have the big one, but we sure do have a light catch!",Looks like I got a real 'catch'!,Looks like our catch of the day! We're having a ball!,Fishing in style,"We didn't know what we were going for, but we got it!",Looks like we've got ourselves a sparkly catch!,We were just trying to catch some fish but ended up with this crystal treasure!,Sometimes you get lucky and sometimes your fish is just a little too 'lit' for its own good.
-617,test,"scene: hell 
+617,"scene: hell 
 description: A group of people are standing in front of a television that is showing flames. A devil-like figure with a trident is standing nearby, overseeing the scene. 
 uncanny description: People in hell are watching a TV showing flames, which is an unusual form of punishment. 
 entities: People, Devil, Television 
 funny caption:","Well, I guess this is what you get for binge-watching Hell's Kitchen.",Welcome to Hell's entertainment complex!,"Well, at least they have cable.",Welcome to Hell's TV Channel - We Show You Flames!,Hello everyone! Today we'll be watching flames on our special hell TV channel.,You've sinned so much that you have to watch TV in Hell now.,"Welcome to Hell, where we watch TV instead of burning in eternal flame.","Well, I guess you could say this is a burning question.",Hell hath no fury like a TV on fire,"Well, it's not like they had Netflix back then."
-621,test,"scene: an office or dressing room 
+621,"scene: an office or dressing room 
 description: A man in a suit of armor is standing in front of a full-length mirror. A man in a business suit is standing next to him, smiling. 
 uncanny description: It is unusual to see someone in a full suit of armor in a modern setting, especially with a businessman. 
 entities: Knight, Businessman 
 funny caption:","When you said you were bringing your 'A' game to the meeting, I didn't expect it to be literal.",When you're the knight at work,I guess you could say he's the knight in shining armor of suits.,"When you said dress code was formal, I didn't expect it to be medieval.","When you finally decide to take the plunge and make your dream of knighthood come true, but realize that it's not as glamorous as you thought.","When you said dress code was formal, I didn't expect to be the only one wearing armor.",Why did the knight break up with his girlfriend? Because he needed some space.,"I'm not sure what's more unusual, the knight or the fact that he's wearing a suit of armor and has a businessman standing next to him.","When you said you wanted a meeting with the Knights Templar, I didn't expect them to be so literal.",I told my boss I wanted to be knighted for my hard work. He said no but gave me this fancy suit instead.
-632,test,"scene: an interrogation room 
+632,"scene: an interrogation room 
 description: Two detectives are in an interrogation room. One is sitting at a desk with a microphone, and the other is standing with their hands on their hips. Behind them is a lineup of Russian nesting dolls of various sizes. 
 uncanny description: It is unusual to see Russian nesting dolls in a police lineup. 
 entities: Detectives, Matryoshka_dolls 
 funny caption:","You better start talking, or you're going to be stuffed into one of these.","We're not sure what they're trying to get out of this suspect, but we know it won't be anything smaller than the smallest doll.",What do you mean this isn't a standard lineup? We have to go through all these layers to find the truth.,"We're not Russian, but we'll get to the bottom of this!",Russian nesting dolls? More like Russian Nesting Suspects!,I'm sorry but I don't think it's appropriate to have a lineup of Russian nesting dolls during this interrogation.,"So we have two suspects in custody today - one for murder, and the other for being too cute.","We're not sure what we've got here, but it looks like someone's been playing with their toys.","I'm sorry, I didn't realize we were doing a Matryoshka interview.",Why did the detective cross the road? To get to the other side of the Russian nesting dolls.
-633,test,"scene: a playground 
+633,"scene: a playground 
 description: Adults and children are playing on slides in a playground. The adults seem to be enjoying the slides just as much as the children. 
 uncanny description: It is unusual to see adults playing on slides meant for children. 
 entities: Adults, Children, Slides 
 funny caption:",Looks like we're not so different after all!,Sliding into adulthood,Looks like these adults have found their inner child,I don't know what happened to me today but I turned into a giant child.,Looks like they're having a slide race!,Slide your way into some serious adult fun!,When you're too old to go down slides but still love them,When your mom/dad tells you they were cooler than you,"When you were young and carefree, but now you're just a big kid.",Playing with your kids just got even more fun. Now we can slide down together!
-634,test,"scene: a pyramid site 
+634,"scene: a pyramid site 
 description: Two tourists are standing at the base of a pyramid, looking at a map. At the top of the pyramid, there is a vendor with an umbrella and a cart. 
 uncanny description: It's unusual to see a vendor at the top of a pyramid. 
 entities: Tourists, Vendor, Pyramid 
 funny caption:",Looking up at the pyramid and wondering where the food truck is.,The only thing missing from this picture is a mummy.,"Looking up at the pyramid, I realized it was made out of stairs.",The only thing missing from this picture is a mummy,"Looks like we found our new best friends! (Tourist A): 'Hey, have you seen the mummy?' (Tourist B): 'No, but I heard they're quite popular around here.' (Vendor): 'I can confirm that.' #pyramidlife","The only thing better than exploring ancient Egypt, is exploring it while sipping on some cold lemonade!",Looks like we found our new Egyptian tour guide,We asked the vendor how he got up here and he said 'I used my pyramid-mobile.',Looks like we found our Egyptologist,"Looking up, we saw the vendor who had the best view in town."
-640,test,"scene: an open space 
+640,"scene: an open space 
 description: A mouse is riding a cat like a horse, using reins and a saddle. The cat is wearing sunglasses. Two other mice are watching this scene. 
 uncanny description: Mice don't ride cats, and cats don't wear sunglasses. 
 entities: Mouse, Cat, Sunglasses 
 funny caption:","Mice aren't known for their horsemanship skills, but with the right equipment, anything is possible!",Looks like they found the perfect pair of 'paws-tacles!',"When you said 'ride or die', I didn't expect it to be literally on top of a cat.",Riding on the wild side with my furry steed!,Looks like someone finally figured out how to get a horse.,"When you said 'ride or die', I didn't expect it to be on the back of a cat.",When you finally convince your cat to take you on a date,"When you can't get your own horse, you borrow someone else's",When you're the only one who can see your friend in the dark.,Riding the furry highway
-643,test,"scene: a concert hall 
+643,"scene: a concert hall 
 description: A man in a tuxedo is sitting at a grand piano, wearing boxing gloves. He looks surprised or confused. 
 uncanny description: It is unusual and impractical to play the piano while wearing boxing gloves. 
 entities: Pianist, Boxing_gloves 
 funny caption:",When you said there would be punching involved.,I guess you could call it 'Piano-boxing'.,"When you said there would be fists flying, I thought it meant I had to wear more clothes.",Why was the pianist wearing boxing gloves? Because he heard there would be no musical chairs!,I'm not sure if I'm playing Mozart or punching a piñata.,Why did the pianist wear boxing gloves? Because he wanted to be a concert-puncher!,When you promised me a night of classical music but gave me a ring.,"The pianist was ready for anything, even a round of applause.","WTF? Why did you bring those?"" ",Looks like someone had a bit of an identity crisis.
-649,test,"scene: a living room 
+649,"scene: a living room 
 description: Two women are sitting on a couch in a living room, having a conversation. There is a railroad track running through the middle of the room. 
 uncanny description: It is highly unusual and dangerous to have a railroad track running through a living room. 
 entities: Railroad_track, Two_women 
 funny caption:","When your mom says 'I don't want you coming home late tonight', but she forgets about the train.",It's not every day you see two women chatting while walking on a train!,"Looks like we're living in 'The Sims', but with a twist!","When you say 'I'll meet you at the house', but really mean 'on the tracks next to our living room'.","Well, this is one way to avoid traffic.",Why did the train break into our house?,It's amazing what you can find when you look under your couch cushions.,Our living room has a unique view. We can see trains coming from miles away.,We were just having coffee when we realized that the train had stopped outside our window.,It's not every day you get to experience life like this.
-652,test,"scene: a deserted island 
+652,"scene: a deserted island 
 description: Two people are sitting on a small deserted island with a palm tree. They are looking at a floating island made of desserts, including cupcakes, cake, and candy canes. 
 uncanny description: A floating island made of desserts is not something you would see in real life. 
 entities: Stranded_people, Dessert_island 
 funny caption:","We thought we were stranded, but turns out we're just surrounded by our dreams",Looks like we've stumbled upon the ultimate sugar high.,Island hopping? More like desert hopping.,"When you finally escape from your aunt's house, only to be stranded on an island made of sweets.",We found our happy place!,"I told him I wanted to live on an island made of dessert but he said nope, too sugary.",Stranded on a deserted island with only dessert to keep us company,We found our sweet paradise.,Lost in translation: 'How did we end up on an island of cupcakes?',We're stranded on a deserted island but we found a better one. It's made entirely of desserts!
-655,test,"scene: a conference stage 
+655,"scene: a conference stage 
 description: A person is standing at a podium giving a speech. Next to them is a massive globe of the Earth, with North and South America prominently displayed. 
 uncanny description: The globe is unrealistically large compared to the person and the podium. 
 entities: Speaker, Globe 
 funny caption:",It's not like I have a big head or anything.,When you realize you're the only thing on this planet that doesn't belong,Why did the earth break? Because it couldn't take anymore of these tiny speeches.,I'm not sure if I should be impressed by how big this globe is or how small the audience is.,"I'm not sure how big you guys think I am, but this globe is absolutely enormous.",Looking for world domination? Start by taking over this globe.,Looks like I'm speaking from the center of the world.,"Wow, I'm really speaking for the whole planet today.","I'm not trying to be big-headed, but I am quite literally giant.",The earth is bigger than I thought... but not as big as this globe.
-662,test,"scene: a wedding venue 
+662,"scene: a wedding venue 
 description: A wedding ceremony is taking place with the bride and groom dressed as Vikings. The bridesmaids and groomsmen are dressed in traditional wedding attire, and the officiant is reading from a book. 
 uncanny description: It is unusual for a bride and groom to dress as Vikings at a wedding ceremony. 
 entities: Bride, Groom, Officiant, Bridesmaids, Groomsmen 
 funny caption:","When you said 'Viking wedding', I didn't expect this level of commitment.",I guess they took their vows very seriously.,When you said 'I do' but really meant 'I'll give you my axe'. #VikingWedding,Viking Love Story Wedding Ceremony - When you know your partner is worth it.,"We may not be able to see each other's faces under our helmets, but I promise to love you no matter what.","I never thought I'd see a Viking wedding until I stumbled upon this one. But then again, anything can happen in the land of the gods!",When you said 'I do' but really meant 'Viking style'. #WeddingGoals,Today we celebrate love... or perhaps just a really weird sense of humor.,Today we welcome the King and Queen of Asgard into our family.,"When you thought your wedding couldn't get any more unique, but then you remembered that you were marrying a Viking."
-664,test,"scene: a courtroom 
+664,"scene: a courtroom 
 description: A judge is leaning over his bench, speaking to a lawyer who is standing in front of him. The lawyer is dressed in modern attire, while the person in the witness stand is dressed in an old-fashioned tuxedo with a top hat and holding a cane. 
 uncanny description: It is unusual for someone to be dressed in such old-fashioned attire in a modern courtroom. 
 entities: Judge, Lawyer, Witness 
 funny caption:",It's like something out of a Dickens novel! And I thought my outfit was unique.,When you realize your client isn't showing up on time.,"When you thought you were going to a normal trial, but then your witness shows up wearing a tuxedo.",I guess he's trying to channel his inner John Adams.,It's like stepping back in time! I wonder what crime this gentleman has committed.,When you're trying to make a good impression on a judge but all you have is your grandpa's wardrobe.,It's like we stepped back in time when they put that witness on stand,Looks like we have a time traveler on our hands!,It's like we stepped back in time and found ourselves in the witness box!,When you have to make a case for time travel.
-666,test,"scene: therapist's office 
+666,"scene: therapist's office 
 description: A man is lying on a red couch shaped like lips, talking to a therapist who is sitting in a chair and taking notes. 
 uncanny description: The couch is unusually shaped like a pair of lips, which is not typical for a therapist's office. 
 entities: Patient, Therapist, Lip-shaped_couch 
 funny caption:","I told her I was having trouble sleeping, but she said it was all in my head... I guess that makes sense since my pillow is a giant brain.",Lip therapy with my favorite therapist.,It was an easy session when the patient asked if I could hear their problems better with my mouth open.,So you're saying I need to kiss my problems goodbye?,When you finally get over your fear of therapy,I don't think I've ever been to a therapist that had a lip-shaped couch before.,When your therapist has a lip-shaped couch.,"I told my therapist I was feeling down, he said 'Just try to take it easy.' I replied, 'You mean like this couch?' He looked confused, then chuckled.","I heard you guys are great at lip reading. Well, I have an appointment with this couch.","I told my therapist I was feeling down and she said 'Well, you could always try talking to yourself' and we both laughed because she had me sit on a lip-shaped couch."
-669,test,"scene: a nursery 
+669,"scene: a nursery 
 description: A baby is standing in a crib with a microphone in front of it. The parents are standing at the door, looking at the baby with pride. 
 uncanny description: Babies don't usually have microphones in their cribs. 
 entities: Baby, Parents, Microphone 
 funny caption:","The baby may be small, but they're already making big things happen.",It seems that this baby has big dreams.,We didn't know babies could sing until we put a microphone in their crib.,Look who's trying to be the next Beyoncé,When you're trying to be the next big thing before you can even walk.,This baby has more talent than any pop star.,When you finally give your kid its first album.,It's like a real-life concert stage for our little rockstar.,Look who got their own talk show,We're starting her career early!
-671,test,"scene: prehistoric landscape 
+671,"scene: prehistoric landscape 
 description: Two woolly mammoths are standing next to each other. One mammoth has several cavemen on its back, who appear to be attacking it with spears. 
 uncanny description: Cavemen did not typically ride or attack mammoths in this manner. 
 entities: Woolly_mammoths, Cavemen 
 funny caption:","Two mammoths standing together, and they're still getting bullied by cavemen.",When you have a bunch of cavemen and no sense of humor.,Looks like these guys didn't get the memo that mammoths were supposed to be peaceful giants.,Hope those spears don't penetrate!,I guess they were trying to mammoth a great escape!,These cavepeople need to get a grip,I guess you could say they're really 'man-eating',When you have a bunch of cave-people and you don't know what to do,Woolly Mammoths and their human sidekicks,"Hey there big guy, you wanna play hide and seek?"
-672,test,"scene: a doctor's office 
+672,"scene: a doctor's office 
 description: A man is sitting in a doctor's office. The doctor, who has the head of a rat, is handing the man a prescription. 
 uncanny description: The doctor has the head of a rat, which is not possible in real life. 
 entities: Doctor, Patient, Rat_head 
 funny caption:","Doctor: 'Good news, you have a terminal illness.' Patient: 'I already knew that. I just came here for my annual checkup.' Doctor: 'Wait, what?'",I went to the doctor and said I had a sore throat. He gave me a rat-tongue syrup.,I told the doctor I had a sore throat. He gave me a rat-shaped lozenge.,I told the doctor I had a rash on my face and he said it was from talking to you,I told my doctor I was shrinking. He gave me this prescription for 'rat-sized pants',When you go to the doctor and they give you a prescription with a rat on it,"I told her I was having trouble with my memory and she said 'well, have you tried chewing on your medications?'",I never expected to leave this appointment with a new pet,I went to the doctor and they said I had a bad case of rodent-itis. They gave me this prescription and told me to take it with a grain of salt.,I went to the doctor and they gave me a prescription for a rat problem.
-676,test,"scene: outside a cave 
+676,"scene: outside a cave 
 description: A caveman is grilling an enormous piece of meat on a small barbecue grill outside a cave. A cavewoman and three children are watching him from the entrance of the cave. 
 uncanny description: The size of the meat is disproportionately large compared to the grill and the caveman. 
 entities: Caveman, Grill, Meat 
 funny caption:",When your wife tells you she wants a bigger house but all you can afford is a bigger meat,When you're the only one with a barbecue grill in the cave,The caveman's barbecue skills were so legendary that he could make even a rock look juicy,When you're a caveman and your wife asks what you've got for dinner.,When you're too lazy to cook inside but your stomach is too big for the grill,"When you said 'I'm bringing home dinner', I didn't expect it to be half my body weight.",When you're too short for a barbecue but still want that juicy steak.,When you say you're bringing home dinner.,When you're trying to cook for your family but all you have is a tiny grill,When you're cooking for five but only have one hand
-677,test,"scene: a kitchen 
+677,"scene: a kitchen 
 description: A man is sleepwalking towards a refrigerator in a kitchen. A cat is sitting on the counter, and its eyes are shining bright beams of light. 
 uncanny description: Cats' eyes do not emit beams of light like flashlights. 
 entities: Sleepwalker, Cat 
 funny caption:",When you gotta get that milk but you're too tired to even look for it.,The ultimate sleepwalking fail - tripping over your own shadow!,When your cat outshines you.,I guess this cat really knows how to make a sandwich,When you finally find out why your cat has been acting strangely.,When you wake up to find your cat has become the night watchman.,Sleepyhead meets Mr. Purrfect,When you realize your cat has been living its best life while you were sleeping.,When you're too lazy to wake up and grab some water.,When you can't wake up but your cat has a flashlight
-682,test,"scene: a tree-lined street 
+682,"scene: a tree-lined street 
 description: Two autumn leaves with faces are hanging from a tree branch, looking down at the ground covered with fallen leaves. One leaf looks surprised while the other looks sad. 
 uncanny description: Leaves don't have faces or emotions. 
 entities: Leaves, Tree, Street 
 funny caption:",Autumn leaves having existential crises,Autumn leaves: always ready for a dramatic fallout,Why do they always fall in pairs? Because life is like a double feature.,Autumn is coming to an end but our feelings never do,"Autumn leaves aren't just falling to the ground, they're expressing their feelings about it too!",When you think the world is cold and unfair until two leaves remind you that everyone has their own struggles.,When your parents ask why you're so sad but they can see it's because of that one leaf,"Autumn, you're such a drama queen.",Autumn leaves got their own feelings now.,They just wanted to fall in love.
-684,test,"scene: a meeting room 
+684,"scene: a meeting room 
 description: A man in a suit is standing at the head of a table in a meeting room. Seated around the table are various monsters and aliens, each with unique and bizarre features. 
 uncanny description: It is unusual to see a human conducting a meeting with monsters and aliens. 
 entities: Human, Monsters, Aliens 
 funny caption:",When you realize that your boss has invited a monster to a staff meeting,I guess you could say this is an intergalactic boardroom.,"When you say 'invite the whole gang,' but really mean 'bring every creature from outer space.' #meetingmadness","When you realize your boss isn't just weird, but also from another planet.",When you have to work with people who look like this every day.,When your boss asks you to bring diversity to the team,"Alien, I need you to update me on your progress on intergalactic peace negotiations. And please, no mind meld.","When you think your boss is weird, but then he invites you to work with a group of monsters.",What do you call a group of people who don't speak the same language? International Uncomfortable Meeting.,When you accidentally schedule an interspecies conference but forgot your suit.
-690,test,"scene: an elevator lobby 
+690,"scene: an elevator lobby 
 description: An astronaut is standing inside an elevator, and a doorman is looking at him with surprise as the elevator doors open. 
 uncanny description: It is unusual to see an astronaut in full gear inside an elevator. 
 entities: Astronaut, Doorman 
 funny caption:",I guess this is what you call a 'space' elevator!,I guess it's safe to say we are going to the moon!,"What do you mean, no humans allowed?!","Well, well, well. Looks like I just landed my first job on the moon.",I guess he's just taking it easy on Mars.,When you realize you're not the only one who can wear oxygen masks.,I didn't know space was so crowded.,What's an astronaut doing in the wrong place?,"Oh, I'm sorry about that, Mr. Spaceman. We don't get many visitors from outer space here.",Lost in space but found in the wrong place
-694,test,"scene: outside a house in winter 
+694,"scene: outside a house in winter 
 description: A person is shoveling snow while another person stands behind them playing a guitar. They are both dressed warmly for winter. 
 uncanny description: It is unusual for someone to play a guitar while another person shovels snow. 
 entities: Snow_shoveler, Guitarist 
 funny caption:","When you said we were going on a date, I didn't expect this kind of adventure.",It's like a winter symphony of sorts.,It turns out that shovelers have great taste in music.,It's always nice to have a backup plan when the power goes out.,When you finally find the perfect tune to clear away the snow.,"When you said 'snow day', I didn't expect a rock concert.",When you're trying to make your neighbor jealous by playing guitar while they shovel snow.,When you're too lazy to sing but can play the guitar,Snowing is hard work but it's even harder when your friend insists on playing guitar at the same time.,"When you said 'I'll help with chores', I didn't expect this."
-699,test,"scene: a therapist's office 
+699,"scene: a therapist's office 
 description: A therapist is sitting in a chair taking notes while three patients lie on stacked couches, one on top of the other. 
 uncanny description: It is unusual and impractical to have three patients lying on stacked couches during a therapy session. 
 entities: Therapist, Patients, Stacked_couches 
 funny caption:",When you thought your therapy session was going to be a one-on-one but ended up being a group session with stacks of humans.,When you can't afford individual chairs.,Therapy with a twist,When you realized that your therapist doesn't actually care about what happens to you.,Stacked up couch therapy - when you can't afford individual sessions.,When you realize you forgot your appointment and have no choice but to attend group therapy,I'm just here for my weekly stacked couch therapy.,Stacked like sardines! It's like a game of Russian Roulette with emotions.,When you know your patients are coming from a long line but still want them all to get their turn.,"Stacked couches, unstacked problems"
-710,test,"scene: an outdoor setting 
+710,"scene: an outdoor setting 
 description: Two people are observing a bird's nest with binoculars. In the nest, there is a bird wearing a hat and playing a guitar with a microphone in front of it. 
 uncanny description: Birds don't wear hats or play guitars. 
 entities: Birdwatchers, Musical_bird 
 funny caption:",What do you get when you mix avian talent with human curiosity?,"Wow, this bird is quite the rockstar!",Birds can be quite the rockstars too!,The coolest thing I've ever seen in my life.,Birdwatchers discover a musical prodigy,It seems like someone forgot to tell the birds that they can't sing pop.,Look who decided to take their bird-watching game to the next level,It turns out that birds can be pretty cool too.,When you can't go to the concert so you bring it to nature,Looks like someone took the concept of 'wildlife' to another level.
-713,test,"scene: an auto repair shop 
+713,"scene: an auto repair shop 
 description: A mechanic is talking to a clown while several clowns are packed tightly inside the car's engine compartment. The car is in a garage with another car on a lift in the background. 
 uncanny description: Clowns should not be inside the engine compartment of a car. 
 entities: Clowns, Mechanic, Car 
 funny caption:","I never thought I'd see clowns in a place like this, but it looks like someone had a bit of a 'joke' in their head.",We take laughter seriously here,Looks like they took the phrase 'under the hood' literally,When you think you've seen it all but then you find out there's clowns inside the engine compartment of your car.,"When you said you needed your oil changed, I didn't expect to find a clown circus inside your engine.",Look who made it through the engine block unscathed!,"When you ask a clown to fix your car and they say ""no problem""","A mechanic once told me that clowns shouldn't be put in the engine compartment, but he didn't say anything about them being stuffed like sardines.",I guess this is what happens when you let clowns run the show.,Clown cars are always ready for a road trip!
-724,test,"scene: a bookstore 
+724,"scene: a bookstore 
 description: People are lined up to meet an author at a book signing event. One of the individuals in line is a large, spiky dinosaur holding a book. 
 uncanny description: Dinosaurs are extinct and wouldn't be attending a book signing event. 
 entities: Dinosaur, Author, Book_signing 
 funny caption:",Meet the prehistoric fan of fiction! The T-Rex couldn't wait for his favorite author to sign this latest bestseller.,I guess you could say this is a dino-mite book signing!,Dino-sore that you couldn't make it?,It looks like someone has a few questions for the author about evolution.,Meeting my favorite extinct creature and getting my book signed by its creator at the same time! #bookworm,It turns out that even extinct creatures can appreciate good literature,I guess you could say I'm a dino-lit fan!,Just met my favorite author...he signed my book with a T-Rex-like pen.,"Attention all fans! The one and only T-Rex will be signing copies of his latest novel, 'A Day in the Life of a Prehistoric Creature.' Don't miss out on this rare opportunity!",It looks like we have a new fan for our book!
-731,test,"scene: a therapy room 
+731,"scene: a therapy room 
 description: A person is sitting in a chair taking notes while another person is digging a hole in the floor with a shovel. The room has a bed and a window with plants on the sill. 
 uncanny description: It is unusual for someone to dig a hole in the floor during a therapy session. 
 entities: Therapist, Patient, Shovel 
 funny caption:",I never thought I'd find love digging holes,"Well, I never saw that coming.",I thought we were going to bury our problems but it turned out I was just being literal.,Digging deep into your issues - literally,I told my therapist I wanted to dig up some old memories and she handed me a shovel.,Excavating my inner demons one dirt clod at a time.,When you think therapy but your therapist is a construction worker.,The therapist really knows how to get you digging deep.,"Digging deep into your feelings, one scoop at a time.",Digging up your past one scoop at a time.
-744,test,"scene: a plain background 
+744,"scene: a plain background 
 description: Two dogs are facing each other, both wearing cone collars. One dog has the cone around its neck, while the other dog has the cone around its midsection. 
 uncanny description: It is unusual for a dog to wear a cone collar around its midsection instead of its neck. 
 entities: Dogs, Cones 
 funny caption:",The only time I've ever seen a dog with a belly button ring,They're the unconventional canine couple!,Look at these two dogs trying to figure out who's more foolish - the one with the cone on its head or the one with it on its butt.,It's like two cones met at a bar and fell in love,"Wow, you really went above and beyond to make sure your dog can't get into anything.",I thought it was just my cat who had two heads... turns out it's these two dogs!,When you're too lazy to put on your own cone and need your buddy to do it for you.,"When you said 'I'm getting a new look,' I didn't expect it to involve two cones.",When your best friend steals your favorite toy and you have to wear a cone.,When you're too short to reach your own ears but refuse to let anyone else do it.
-747,test,"scene: backyard 
+747,"scene: backyard 
 description: Two people are sitting outside on chairs, looking up at a man who is hanging upside down from a fence. 
 uncanny description: It is unusual for someone to be hanging upside down from a fence in a backyard. 
 entities: People, Fence 
 funny caption:",When you forget your flippers at home,"It's a bird, it's a plane...it's a human dangling from a fence",When you thought the neighbor's dog was going to get caught in the fence but it ended up being you.,When you're too lazy to get off the couch and go inside.,Looks like our neighbor finally got his hands on some high-quality exercise equipment.,Looks like we have an acrobat in our midst!,"Wow, I've never seen anyone do that before! But I guess it's better than doing nothing at all.",I guess they were feeling low.,Looks like our neighbor finally found the secret to eternal youth,We just found out the best way to enjoy nature.
-751,test,"scene: a city street 
+751,"scene: a city street 
 description: People are walking around a city, each enclosed in their own transparent bubble. Even a dog is in its own bubble. 
 uncanny description: People and animals don't walk around in individual bubbles. 
 entities: People, Bubbles, Dog 
 funny caption:",I guess the only thing we can't share anymore is air.,Bubble social distancing,What happened when everyone got COVID-19? They all got bubble-COVID.,I guess this is what they call 'social distancing'.,Socially distanced from reality,I guess this is how the world would be if we all had our own personal space bubble,I guess you could say it's a 'bubble-city',"Honest to God, it was just like that episode of Friends where they all have those special suits.",I guess you could say we were all living in our own personal bubble,I guess you could say we're all living in our own little world.
-752,test,"scene: a street or sidewalk 
+752,"scene: a street or sidewalk 
 description: Two people are walking while surrounded by anthropomorphic books. The books have faces and limbs, and they appear to be interacting with the people. 
 uncanny description: Books don't have faces and limbs, and they don't interact with people like this. 
 entities: People, Books 
 funny caption:",I guess you could say we live in a book-lined world.,Two bookworms trying to figure out if their favorite author is an introvert or extrovert,I thought I was reading a book until it started talking to me.,I thought I was in a world of fiction until these books started talking.,I guess it's no wonder these guys always know what to read.,I wonder what kind of book you would get if you walked down the street.,It was just another day at the library!,It was a page turner!,I didn't realize books were so social until I saw these guys on my way to work.,I guess these books just wanted to read on the go.
-758,test,"scene: a city sidewalk 
+758,"scene: a city sidewalk 
 description: People are walking down a sidewalk in front of a building. One person is sitting at a desk on the sidewalk, conducting business as if they were in an office. A person in a bathrobe is standing in the doorway of the building, observing the scene. 
 uncanny description: It is unusual to see someone conducting business at a desk on a sidewalk. 
 entities: Pedestrians, Desk, Person_in_bathrobe 
 funny caption:",When you have your own personal workspace anywhere.,When you realize you've been working from home for so long that an outdoor desk becomes your new normal.,From cubicle to curb: The ultimate office upgrade.,Office on the Sidewalk,"When you can't afford an office, but still need a place to work.","When you can't afford an office, you bring it to the street.",Looks like someone found their new home!,When you're too lazy to go inside your own home and set up a workspace.,This guy really knows how to close deals from the street!,Looks like someone decided to work from home... but on the street
-761,test,"scene: a park or outdoor area 
+761,"scene: a park or outdoor area 
 description: The Grim Reaper is holding a tray of muffins and offering them to a man, while a woman stands nearby watching. 
 uncanny description: The Grim Reaper is not typically known for offering baked goods. 
 entities: Grim_Reaper, Man, Woman, Muffins 
