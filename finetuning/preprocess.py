@@ -21,6 +21,20 @@ def preprocess_zs(examples, sample_pairs_per_prompt=1000):
             prompts.append({"text": prompt+str(ranking_data.iloc[i]['caption']), "prompt": prompt, 'contest_number': example['contest_number']})
     return prompts
 
+def preprocess_sft_simple(examples, sample_pairs_per_prompt = 1000):
+    '''
+    Process the prompt for supervised finetuning 
+    '''
+    prompts = []
+    for example in examples:
+        ranking_data = pd.read_csv(os.path.join(DATA_PATH, "ranking", str(example['contest_number'])+'.csv'))
+        entities = example['entities']
+        prompt =  "scene: {} \n description: {} \n uncanny description: {} \n entities: {} \n funny caption: ".format(example['location'],example['canny'], example['uncanny'], ', '.join(entities)) 
+        idx = random.sample(range(len(ranking_data)), sample_pairs_per_prompt) 
+        for i in idx: 
+            prompts.append({"text": prompt+str(ranking_data.iloc[i]['caption']), "prompt": prompt, 'contest_number': example['contest_number']})
+    return prompts
+
 def preprocess_sft(examples, sample_pairs_per_prompt = 1000):
     '''
     Process the prompt for supervised finetuning 
@@ -148,8 +162,15 @@ if __name__ == "__main__":
 
     train_sft_data.save_to_disk(os.path.join(DATA_PATH, 'sft_dataset' , 'train_sft_dataset'))
     test_sft_data.save_to_disk(os.path.join(DATA_PATH, 'sft_dataset' , 'test_sft_dataset'))
+    
+    # Save the SFT prompt of simpler format (same as DPO) for further finetuing with DPO
+    train_sft_data, test_sft_data  = preprocess_sft_simple(df_train), preprocess_sft(df_test)
+    train_sft_data, test_sft_data = Dataset.from_list(train_sft_data), Dataset.from_list(test_sft_data)
 
-    # Save the DPO prompt 
+    train_sft_data.save_to_disk(os.path.join(DATA_PATH, 'sft_simple_dataset' , 'train_sft_dataset'))
+    test_sft_data.save_to_disk(os.path.join(DATA_PATH, 'sft_simple_dataset' , 'test_sft_dataset'))
+
+    # Save the DPO (/PPO/Reward modeling) prompt 
     
     train_dpo_data = preprocess_dpo(df_train)
     test_dpo_data = preprocess_dpo(df_test) 

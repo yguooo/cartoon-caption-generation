@@ -1,26 +1,19 @@
 
 # SFT  
 
-CUDA_VISIBLE_DEVICES=5 python humor_sft.py --output_dir /data/yguo/myoutput/  --dataset_dir /data/yguo/mydataset/
-CUDA_VISIBLE_DEVICES=6 python humor_sft.py --output_dir /data/yguo/myoutput/  --dataset_dir /data/yguo/mydataset/ --new_padding_token
+CUDA_VISIBLE_DEVICES=5 python humor_sft.py --output_dir /your/output/dir/  --dataset_dir /your/dataset/dir/
+CUDA_VISIBLE_DEVICES=6 python humor_sft.py --output_dir /your/output/dir/  --dataset_dir /your/dataset/dir/ --new_padding_token
 
 
 # DPO  
-CUDA_VISIBLE_DEVICES=7 python humor_dpo.py --dataset_dir /data/yguo/mydataset/ --model_name mistralai/Mistral-7B-instruct-v0.1 --run_name full-instruct-dpo-warmup  --do_train --do_eval --output_dir /data/yguo/myoutput/
---model_checkpoint_name /data/yguo/myoutput/sft/new_pad/checkpoint-100
-
-CUDA_VISIBLE_DEVICES=7 python humor_dpo.py --dataset_dir /data/yguo/mydataset/ --model_name mistralai/Mistral-7B-instruct-v0.1 --run_name full-instruct-dpo-warmup  --do_train --do_eval --output_dir /data/yguo/myoutput/
-
+CUDA_VISIBLE_DEVICES=7 python humor_dpo.py --dataset_dir /your/dataset/dir/ --model_name mistralai/Mistral-7B-instruct-v0.1 --run_name full-instruct-dpo-warmup  --do_train --do_eval --output_dir /your/output/dir/
+--model_checkpoint_name /your/sft/checkpoint/with/simple/prompt/
 
 # Reward Modeling
-
-CUDA_VISIBLE_DEVICES=7 python humor_reward_modeling.py --dataset_dir /data/yguo/mydataset/ --model_name weqweasdas/RM-Mistral-7B --run_name rm --do_train  --do_eval --output_dir /data/yguo/myoutput/ --max_steps 5000
-
-CUDA_VISIBLE_DEVICES=7 python humor_reward_modeling.py --dataset_dir /data/yguo/mydataset/ --model_name weqweasdas/RM-Mistral-7B --run_name rm --do_train  --do_eval --output_dir /data/yguo/myoutput/ --max_steps 5000 --new_padding_token
-
+CUDA_VISIBLE_DEVICES=2 python humor_ppo.py --dataset_dir /your/dataset/dir --run_name ppo --output_dir /your/output/dir --target_kl 80 --reward_model /your/finetuned/reward/model
 
 # PPO
-CUDA_VISIBLE_DEVICES=2 python humor_ppo.py --dataset_dir /data/yguo/mydataset --run_name ppo --output_dir /data/yguo/myoutput --target_kl 80 --reward_model mistralai/Mistral-7B-instruct-v0.1
+CUDA_VISIBLE_DEVICES=2 python humor_ppo.py --dataset_dir /your/dataset/dir/ --run_name ppo --output_dir /your/output/dir/ --target_kl 80 --reward_model /your/finetuned/reward/model
 
 # LLaVA finetune
 
@@ -29,8 +22,8 @@ deepspeed --include localhost:2 llava/train/train_mem.py \
     --deepspeed ./scripts/zero3.json \
     --model_name_or_path llava-hf/llava-v1.6-mistral-7b-hf \
     --version v1 \
-    --data_path /data/yguo/mydataset/llava_sft_dataset/train_llava_sft_dataset.json \
-    --image_folder /data/yguo/mydataset/cartoons/ \
+    --data_path /your/dataset/dir/llava_sft_dataset/train_llava_sft_dataset.json \
+    --image_folder /your/dataset/dir/cartoons/ \
     --vision_tower openai/clip-vit-large-patch14-336 \
     --mm_projector_type mlp2x_gelu \
     --mm_vision_select_layer -2 \
@@ -39,7 +32,7 @@ deepspeed --include localhost:2 llava/train/train_mem.py \
     --image_aspect_ratio pad \
     --group_by_modality_length True \
     --bf16 True \
-    --output_dir /data/yguo/myoutput/llava_sft/ \
+    --output_dir /your/output/dir/llava_sft/ \
     --num_train_epochs 1 \
     --per_device_train_batch_size 16 \
     --per_device_eval_batch_size 4 \

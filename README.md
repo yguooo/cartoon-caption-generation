@@ -23,41 +23,63 @@ This code constains code for:
 We present a novel multimodal preference dataset for creative tasks, consisting of over 250 million human ratings on more than 2.2 million captions, collected through crowdsourcing rating data for The New Yorker's weekly cartoon caption contest over the past eight years. This unique dataset supports the development and evaluation of multimodal large language models and preference-based fine-tuning algorithms for humorous caption generation. We propose novel benchmarks for judging the quality of model-generated captions, utilizing both GPT4 and human judgments to establish ranking-based evaluation strategies. Our experimental results highlight the limitations of current fine-tuning methods, such as RLHF and DPO, when applied to creative tasks. Furthermore, we demonstrate that even state-of-the-art models like GPT4 and Claude currently underperform top human contestants in generating humorous captions. As we conclude this extensive data collection effort, we release the entire preference dataset to the research community, fostering further advancements in AI humor generation and evaluation.
 
 ## Finetuning
+Prior to finetuning, you need to change the directory.
+```
+cd finetuning
+```
+and create several datasets with the following command:
+```
+python preprocess.py 
+```
 
 ### SFT  
 ```
-CUDA_VISIBLE_DEVICES=5 python humor_sft.py --output_dir /data/yguo/myoutput/  --dataset_dir /data/yguo/mydataset/
-CUDA_VISIBLE_DEVICES=6 python humor_sft.py --output_dir /data/yguo/myoutput/  --dataset_dir /data/yguo/mydataset/ --new_padding_token
+python humor_sft.py --output_dir /your/output/dir/  --dataset_dir /your/dataset/dir/
 ```
 
 ### DPO  
+Our experiments show that using a sft checkpoint from simple prompt forms the better checkpoint for DPO than training from scratch or from an SFT checkpoint with long prompt.
 ```
-CUDA_VISIBLE_DEVICES=7 python humor_dpo.py --dataset_dir /data/yguo/mydataset/ --model_name mistralai/Mistral-7B-instruct-v0.1 --run_name full-instruct-dpo-warmup  --do_train --do_eval --output_dir /data/yguo/myoutput/
---model_checkpoint_name /data/yguo/myoutput/sft/new_pad/checkpoint-100
-CUDA_VISIBLE_DEVICES=7 python humor_dpo.py --dataset_dir /data/yguo/mydataset/ --model_name mistralai/Mistral-7B-instruct-v0.1 --run_name full-instruct-dpo-warmup  --do_train --do_eval --output_dir /data/yguo/myoutput/
+python humor_sft.py --output_dir /your/output/dir/  --dataset_dir /your/dataset/dir/ --new_padding_token --simple_prompt
+```
+
+Including `--new_padding_token` will produce similar model, but it is required to obtain an sft checkpoint for further finetuning the DPO model.  
+Including `--simple_prompt` will use a simple prompt (same as DPO) for SFT. 
+
+Then, you can finetune the DPO from this generated SFT checkpoint.
+```
+python humor_dpo.py --dataset_dir /your/dataset/dir/ --model_name mistralai/Mistral-7B-instruct-v0.1 --run_name full-instruct-dpo-warmup  --do_train --do_eval --output_dir /your/output/dir/
+--model_checkpoint_name /your/sft/checkpoint/with/simple/prompt/
 ```
 
 ### Reward Modeling
+You can use the following command to finetune a reward model. Since generating humorous texts typically is not in the training dataset of public reward model, we need to finetune the reward model ourselves.
 ```
-CUDA_VISIBLE_DEVICES=7 python humor_reward_modeling.py --dataset_dir /data/yguo/mydataset/ --model_name weqweasdas/RM-Mistral-7B --run_name rm --do_train  --do_eval --output_dir /data/yguo/myoutput/ --max_steps 5000
-CUDA_VISIBLE_DEVICES=7 python humor_reward_modeling.py --dataset_dir /data/yguo/mydataset/ --model_name weqweasdas/RM-Mistral-7B --run_name rm --do_train  --do_eval --output_dir /data/yguo/myoutput/ --max_steps 5000 --new_padding_token
+python humor_reward_modeling.py --dataset_dir /your/dataset/dir/ --model_name weqweasdas/RM-Mistral-7B --run_name rm --do_train  --do_eval --output_dir /your/output/dir/ --max_steps 5000
 ```
+You can also choose custom reward model from [reward bench](https://huggingface.co/spaces/allenai/reward-bench) to finetune different reward models.
 
 
 ### PPO
+Our PPO model is directly finetune from `mistralai/Mistral-7B-instruct-v0.1`. You need to first finetune a reward model to run the PPO.
 ```
-CUDA_VISIBLE_DEVICES=2 python humor_ppo.py --dataset_dir /data/yguo/mydataset --run_name ppo --output_dir /data/yguo/myoutput --target_kl 80 --reward_model mistralai/Mistral-7B-instruct-v0.1
+python humor_ppo.py --dataset_dir /your/dataset/dir --run_name ppo --output_dir /your/output/dir --target_kl 80 --reward_model /your/finetuned/reward/model
 ```
 
 ### LLaVA finetune
+To perform LLaVA finetune, you need to first clone the original LLaVA directory. 
+```
+git clone https://github.com/haotian-liu/LLaVA/
+```
+Then, at the uppermost level, run the following command.
 ```
 deepspeed --include localhost:2 llava/train/train_mem.py \
     --lora_enable True --lora_r 128 --lora_alpha 256 --mm_projector_lr 2e-5 \
     --deepspeed ./scripts/zero3.json \
     --model_name_or_path llava-hf/llava-v1.6-mistral-7b-hf \
     --version v1 \
-    --data_path /data/yguo/mydataset/llava_sft_dataset/train_llava_sft_dataset.json \
-    --image_folder /data/yguo/mydataset/cartoons/ \
+    --data_path /your/dataset/dir/llava_sft_dataset/train_llava_sft_dataset.json \
+    --image_folder /your/dataset/dir/cartoons/ \
     --vision_tower openai/clip-vit-large-patch14-336 \
     --mm_projector_type mlp2x_gelu \
     --mm_vision_select_layer -2 \
@@ -66,7 +88,7 @@ deepspeed --include localhost:2 llava/train/train_mem.py \
     --image_aspect_ratio pad \
     --group_by_modality_length True \
     --bf16 True \
-    --output_dir /data/yguo/myoutput/llava_sft/ \
+    --output_dir /your/output/dir/llava_sft/ \
     --num_train_epochs 1 \
     --per_device_train_batch_size 16 \
     --per_device_eval_batch_size 4 \
@@ -88,11 +110,33 @@ deepspeed --include localhost:2 llava/train/train_mem.py \
     --report_to wandb
 ```
 
-## Evaluate the results of pretrained and finetuned language model 
+## Generating the results of pretrained and finetuned language model 
 
-`finetuning/example_evaluation.py`
+You can generate sample captions given an trained model using the following commands. 
+```
+# Save ZS result
+python save_results.py --method zs --dataset_dir /your/dataset/dir --output_dir /your/output/dir --model_name mistralai/Mistral-7B-Instruct-v0.1 --num_generation 10
+# Save SFT result
+CUDA_VISIBLE_DEVICES=5 python save_results.py --method sft --dataset_dir /your/dataset/dir --output_dir /your/output/dir --model_name mistralai/Mistral-7B-Instruct-v0.1 --model_checkpoint /your/output/dir/sft/new_pad --num_generation 10 --new_padding_token 
+# Save dpo result
+CUDA_VISIBLE_DEVICES=5 python save_results.py --method dpo --dataset_dir /your/dataset/dir --output_dir /your/output/dir --model_name mistralai/Mistral-7B-Instruct-v0.1 --model_checkpoint /your/output/dir/sft/new_pad --num_generation 10 --new_padding_token 
+# Save ppo result
+python save_results.py --method ppo --dataset_dir /your/dataset/dir --output_dir /your/output/dir --model_name mistralai/Mistral-7B-Instruct-v0.1 --model_checkpoint mistralai/Mistral-7B-Instruct-v0.1 --num_generation 10
+# Save llava result
+python save_results.py --method llava --dataset_dir /your/dataset/dir --output_dir /your/output/dir --model_name llava-hf/llava-v1.6-mistral-7b-hf --num_generation 10 --device cuda:5
+# Save llava sft result
+python save_results.py --method llava --dataset_dir /your/dataset/dir --output_dir /your/output/dir --model_name llava-hf/llava-v1.6-mistral-7b-hf --model_checkpoint your/llava/sft/checkpoint --num_generation 10 --device cuda:5
+```
+To obtain the best-of-N sample generation, you need to first generate more captions. We recommend generating 5 times more captions than the final generations as a rule of thumb. Then, you can pick good captions out of these generations with a finetuned reward model.
+```
+python save_results.py --method zs --dataset_dir /your/dataset/dir --output_dir /your/output/dir --model_name mistralai/Mistral-7B-Instruct-v0.1 --num_generation 50
+python save_bon_results.py --reward_model /your/reward/model/ --dataset_dir /your/dataset/dir --generation_file /your/output/dir/generation/zs_gen10.csv --model_name mistralai/Mistral-7B-Instruct-v0.1 --num_generation 10
+```
 
-We provide all model checkpoints for finetuned models. Model checkpoints can be found [here](https://uwmadison.box.com/s/0c31rxhwgzqa5jvy7wd84qycjr1twf19).It incluces: 
+You can also check out our already generated captions in `examples/generation`. To further evaluate these generations, you can also refer to `finetuning/generation_evaluation.ipynb` or `ranking/example_rank_more.ipynb`. 
+
+## Download Checkpoints
+Since the finetune procedure can take from 1 day up to a week on an A100, we provide all model checkpoints for finetuned models. Model checkpoints can be found [here](https://uwmadison.box.com/s/0c31rxhwgzqa5jvy7wd84qycjr1twf19).It incluces: 
 - `reward`
 - `sft`
 - `dpo`

@@ -59,7 +59,6 @@ if __name__ == "__main__":
 
     files = [
             # "your/generation/file.csv"
-            "/data/yguo/myoutput/generation/sft_gen10.csv"
         ]
     # Use start_col = 2 for non-llava dataset and start_col = 3 for llava dataset, since llava requires an additional 
     # column for the image info.

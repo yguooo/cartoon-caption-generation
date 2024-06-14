@@ -37,7 +37,8 @@ class ScriptArguments:
     # Choice of padding token does not affect the model performance, but they matter if we want to use the model as the
     # checkpoint for dpo/ppo models
     new_padding_token: bool = False
-    
+    # Whether load the dataset with simple or complex prompt. Simple prompt is for training the SFT checkpoint for DPO warmup. 
+    simple_prompt: bool = False
 if __name__ == "__main__":
     parser = HfArgumentParser(ScriptArguments)
     script_args = parser.parse_args_into_dataclasses()[0]
@@ -59,7 +60,10 @@ if __name__ == "__main__":
         do_eval=True,
     )
     
-    script_args.dataset_dir = os.path.join(script_args.dataset_dir, 'sft_dataset')  
+    if script_args.simple_prompt:
+        script_args.dataset_dir = os.path.join(script_args.dataset_dir, 'sft_simple_dataset')  
+    else:
+        script_args.dataset_dir = os.path.join(script_args.dataset_dir, 'sft_dataset')  
 
     training_args.output_dir = os.path.join(training_args.output_dir, 'sft', script_args.model_name)  
     if script_args.new_padding_token:
