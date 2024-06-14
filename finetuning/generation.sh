@@ -1,10 +1,20 @@
 # Save ZS result
-CUDA_VISIBLE_DEVICES=5 python save_results.py \
+CUDA_VISIBLE_DEVICES=7 python save_results.py \
     --method zs \
     --dataset_dir /data/yguo/mydataset \
     --output_dir /data/yguo/myoutput \
     --model_name mistralai/Mistral-7B-Instruct-v0.1 \
     --num_generation 10
+
+# Save bon result
+CUDA_VISIBLE_DEVICES=7 python save_bon_results.py \
+    --reward_model mistralai/Mistral-7B-Instruct-v0.1 \
+    --dataset_dir /data/yguo/mydataset \
+    --output_dir /data/yguo/myoutput \
+    --generation_file /data/yguo/myoutput/generation/zs_gen10.csv \
+    --model_name mistralai/Mistral-7B-Instruct-v0.1 \
+    --num_generation 10
+
 
 # Save SFT result
 CUDA_VISIBLE_DEVICES=5 python save_results.py \
@@ -15,15 +25,37 @@ CUDA_VISIBLE_DEVICES=5 python save_results.py \
     --num_generation 10 \
     --new_padding_token 
 
+# Save dpo result
+CUDA_VISIBLE_DEVICES=5 python save_results.py \
+    --method dpo --dataset_dir /data/yguo/mydataset \
+    --output_dir /data/yguo/myoutput \
+    --model_name mistralai/Mistral-7B-Instruct-v0.1 \
+    --model_checkpoint /data/yguo/myoutput/sft/new_pad/checkpoint-100 \
+    --num_generation 10 \
+    --new_padding_token 
 
-    parser = argparse.ArgumentParser(description="Description of your script")
-    parser.add_argument("--dataset_dir", type=str, required=True, help="Your dataset path")
-    parser.add_argument("--output_dir", type=str, required=True, help="Your dataset path")
-    parser.add_argument("--method", type=str, required=True, help="Description for the caption generation method")
-    parser.add_argument("--setting", type=str, default="", required=False, help="The setting name that you want to save the results as")
-    parser.add_argument("--model_name", type=str, default=None, required="mistralai/Mistral-7B-Instruct-v0.1",\
-        help="The pretrained model that your model is (finetuned from)")
-    parser.add_argument("--model_checkpoint", type=str, default=None,required=False, help="Your model_checkpoint")
-    parser.add_argument("--num_generation", type=int, default=10, required=False, help="Number of caption generations per contest")
-    parser.add_argument("--new_padding_token", action="store_true", \
-        help="Add a new padding token to the tokenizer, please keep it consistent with your model checkpoint")
+# Save ppo result
+CUDA_VISIBLE_DEVICES=5 python save_results.py \
+    --method ppo --dataset_dir /data/yguo/mydataset \
+    --output_dir /data/yguo/myoutput \
+    --model_name mistralai/Mistral-7B-Instruct-v0.1 \
+    --model_checkpoint mistralai/Mistral-7B-Instruct-v0.1 \
+    --num_generation 10
+
+
+# Save llava result
+python save_results.py \
+    --method llava --dataset_dir /data/yguo/mydataset \
+    --output_dir /data/yguo/myoutput \
+    --model_name llava-hf/llava-v1.6-mistral-7b-hf \
+    --num_generation 10 \
+    --device cuda:5
+
+# Save llava_sft result
+python save_results.py \
+    --method llava --dataset_dir /data/yguo/mydataset \
+    --output_dir /data/yguo/myoutput \
+    --model_name llava-hf/llava-v1.6-mistral-7b-hf \
+    --model_checkpoint your/llava/sft/checkpoint \
+    --num_generation 10 \
+    --device cuda:5
