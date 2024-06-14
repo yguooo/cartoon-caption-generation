@@ -73,4 +73,3 @@ deepspeed --include localhost:2 llava/train/train_mem.py \
     --lazy_preprocess True \
     --report_to wandb
 ```
-### Download Checkpoints 
