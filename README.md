@@ -1,4 +1,4 @@
-# cartoon-caption-generation
+# Code for "Humor in AI: Massive Scale Crowd-Sourced Preferences and Benchmarks for Cartoon Captioning"
 
 
 ## Dataset
