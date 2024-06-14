@@ -16,10 +16,7 @@ def pick_bon(row, reward_df, sentiment_pipe, n = 10):
     contest_number = row['contest_number']
     print(contest_number)
     captions = row[2:].to_list() 
-    print(reward_df)
-    print(reward_df['contest_number'] == contest_number)
-    prompt = reward_df[reward_df['contest_number'] == contest_number]
-    print(prompt)
+    prompt = reward_df[reward_df['contest_number'] == contest_number]['prompt'].tolist()[0]
     texts = [ prompt + str(caption) for caption in captions]
     sent_kwargs = {"return_all_scores": True, "function_to_apply": "none", "batch_size": 16}
     pipe_outputs = sentiment_pipe(texts, **sent_kwargs)
@@ -35,7 +32,6 @@ def pick_bon(row, reward_df, sentiment_pipe, n = 10):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Description of your script")
     parser.add_argument("--dataset_dir", type=str, required=True, help="Your dataset path")
-    parser.add_argument("--output_dir", type=str, required=True, help="Your output path")
     parser.add_argument("--reward_model", type=str, required=True, help="Your reward model directory")
     parser.add_argument("--generation_file", type=str, required=True, help="filename of the caption generation")
     parser.add_argument("--model_name", type=str, default=None, required="mistralai/Mistral-7B-Instruct-v0.1",\
@@ -44,8 +40,7 @@ if __name__ == "__main__":
     
     args = parser.parse_args()
     seed_everything(2024) 
-    args.output_dir = os.path.join(args.output_dir, 'generation')
-    
+        
     tokenizer = AutoTokenizer.from_pretrained(args.model_name)
     tokenizer.pad_token = tokenizer.eos_token
     tokenizer.padding_side = "left"
@@ -76,4 +71,4 @@ if __name__ == "__main__":
         for j in range(len(bon_texts)): 
             df_topn.iloc[i, j+2] = bon_texts[j] # Only keep the caption and discard the explanation.
 
-    df_topn.to_csv(dir + "_BoN.csv", index=False)
+    df_topn.to_csv(args.generation_file[:-4] + "_BoN.csv", index=False)

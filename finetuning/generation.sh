@@ -7,10 +7,9 @@ CUDA_VISIBLE_DEVICES=7 python save_results.py \
     --num_generation 10
 
 # Save bon result
-CUDA_VISIBLE_DEVICES=7 python save_bon_results.py \
+CUDA_VISIBLE_DEVICES=0 python save_bon_results.py \
     --reward_model mistralai/Mistral-7B-Instruct-v0.1 \
     --dataset_dir /data/yguo/mydataset \
-    --output_dir /data/yguo/myoutput \
     --generation_file /data/yguo/myoutput/generation/zs_gen10.csv \
     --model_name mistralai/Mistral-7B-Instruct-v0.1 \
     --num_generation 10
