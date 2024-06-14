@@ -1,14 +1,28 @@
-# Code for "Humor in AI: Massive Scale Crowd-Sourced Preferences and Benchmarks for Cartoon Captioning"
+# Humor in AI: Massive Scale Crowd-Sourced Preferences and Benchmarks for Cartoon Captioning 
+
+[![Code License](https://img.shields.io/badge/Code%20License-Apache_2.0-green.svg)](https://github.com/tatsu-lab/alpaca_farm/blob/main/LICENSE)
+[![Data License](https://img.shields.io/badge/Data%20License-CC%20By%20NC%204.0-red.svg)](https://github.com/tatsu-lab/alpaca_farm/blob/main/DATA_LICENSE)
+[![Python 3.10+](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/downloads/release/python-3100/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
 
 
 ## Dataset
+
+Read our paper at arxiv (link)
+
+See past hosted contest at this [website](https://nextml.github.io/caption-contest-data/)
+
+This code constains code for: 
+- Finetuning preference models
+- Evaluation with languages models like GPT-4 
+- results exploration and diversity investigation
 
 ## Dataset Statistics
 
 ## Evaluation
 
 ## Finetuning
-
 
 ### SFT  
 ```
@@ -73,3 +87,26 @@ deepspeed --include localhost:2 llava/train/train_mem.py \
     --lazy_preprocess True \
     --report_to wandb
 ```
+
+## Refer to `finetuning/example_evaluation.py`
+
+We provide all model checkpoints for finetuned models. Model checkpoints can be found [here](https://uwmadison.box.com/s/0c31rxhwgzqa5jvy7wd84qycjr1twf19).It incluces: 
+- `reward`
+- `sft`
+- `dpo`
+- `ppo`
+- `llava_sft`
+
+You can also see our sample caption generations from the pretrained model in this [folder](https://github.com/yguooo/cartoon-caption-generation/tree/main/finetuning/generation)
+
+# Citation 
+
+Please consider citing our work if you use our code and data in this repo 
+
+```
+Jain, L., Jamieson, K., Mankoff, R., Nowak, R., Sievert, S., (2020). The New Yorker Cartoon Caption Contest Dataset. https://nextml.github.io/caption-contest-data/
+```
+
+
+
+Our paper citation ? 
