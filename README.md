@@ -88,7 +88,9 @@ deepspeed --include localhost:2 llava/train/train_mem.py \
     --report_to wandb
 ```
 
-## Refer to `finetuning/example_evaluation.py`
+## Evaluate the results of pretrained and finetuned language model 
+
+`finetuning/example_evaluation.py`
 
 We provide all model checkpoints for finetuned models. Model checkpoints can be found [here](https://uwmadison.box.com/s/0c31rxhwgzqa5jvy7wd84qycjr1twf19).It incluces: 
 - `reward`
@@ -97,7 +99,8 @@ We provide all model checkpoints for finetuned models. Model checkpoints can be 
 - `ppo`
 - `llava_sft`
 
-You can also see our sample caption generations from the pretrained model in this [folder](https://github.com/yguooo/cartoon-caption-generation/tree/main/finetuning/generation)
+You can also see our sample caption generations from the pretrained model in this `examples/generations`
+-
 
 # Citation 
 
