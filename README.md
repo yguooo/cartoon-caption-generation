@@ -1,4 +1,4 @@
-# cartoon-caption-generation
+# Code for "Humor in AI: Massive Scale Crowd-Sourced Preferences and Benchmarks for Cartoon Captioning"
 
 
 ## Dataset
@@ -73,4 +73,3 @@ deepspeed --include localhost:2 llava/train/train_mem.py \
     --lazy_preprocess True \
     --report_to wandb
 ```
-### Download Checkpoints 
