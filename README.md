@@ -17,7 +17,8 @@ This code constains code for:
 - Evaluation with languages models like GPT-4 
 - results exploration and diversity investigation
 
-## Dataset Statistics
+## Examples and Tutorials
+Examples of how we use GPT4 to generate captions and descriptions can be found in `generation/example.ipynb`. Examples of us evaluating GPT4's ranking reliability (human top 10 vs 1000-1009) can be found in `ranking/example_rank.ipynb`. Examples of evaluation of model generated outputs can be found in `ranking/example_rank_more.ipynb`. Lastly, examples generated from our finetuned model can be found in `examples/generations`.
 
 ## Evaluation
 We present a novel multimodal preference dataset for creative tasks, consisting of over 250 million human ratings on more than 2.2 million captions, collected through crowdsourcing rating data for The New Yorker's weekly cartoon caption contest over the past eight years. This unique dataset supports the development and evaluation of multimodal large language models and preference-based fine-tuning algorithms for humorous caption generation. We propose novel benchmarks for judging the quality of model-generated captions, utilizing both GPT4 and human judgments to establish ranking-based evaluation strategies. Our experimental results highlight the limitations of current fine-tuning methods, such as RLHF and DPO, when applied to creative tasks. Furthermore, we demonstrate that even state-of-the-art models like GPT4 and Claude currently underperform top human contestants in generating humorous captions. As we conclude this extensive data collection effort, we release the entire preference dataset to the research community, fostering further advancements in AI humor generation and evaluation.
