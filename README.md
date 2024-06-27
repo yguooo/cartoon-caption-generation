@@ -162,9 +162,10 @@ You can also see our sample caption generations from the pretrained model on the
 Please consider citing our work if you use our code and data in this repo 
 
 ```
-Jain, L., Jamieson, K., Mankoff, R., Nowak, R., Sievert, S., (2020). The New Yorker Cartoon Caption Contest Dataset. https://nextml.github.io/caption-contest-data/
+@article{zhang2024humor,
+  title={Humor in AI: Massive Scale Crowd-Sourced Preferences and Benchmarks for Cartoon Captioning},
+  author={Zhang, Jifan and Jain, Lalit and Guo, Yang and Chen, Jiayi and Zhou, Kuan Lok and Suresh, Siddharth and Wagenmaker, Andrew and Sievert, Scott and Rogers, Timothy and Jamieson, Kevin and others},
+  journal={arXiv preprint arXiv:2406.10522},
+  year={2024}
+}
 ```
-
-
-
-Our paper citation ? 
